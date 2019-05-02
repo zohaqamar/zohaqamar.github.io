@@ -1,20 +1,18 @@
 function setup() {
-	createCanvas(800,600); // make an HTML canvas element width x height pixels
+	createCanvas(window.innerWidth,window.innerHeight); // make an HTML canvas element width x height pixels
+	//now i have this width thing for the window, but it does not carry over if the size of the sindow changes once the page is already loaded
 	frameRate(1)
 	ranh=Math.random()
 	ranm=Math.random()
 	rans=Math.random()
 	noStroke()
 
-
+	
 }
 
 function draw() {
-	background(240, 240, 255);
+	background(0, 0, 0);
 	
-
-
-
 
 	for (var x = 0; x < hour(); x +=1) {
 
