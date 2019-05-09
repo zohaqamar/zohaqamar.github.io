@@ -9,7 +9,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zq portfolio example</title>
     <style> body {padding: 100; margin: 100;} </style>
-  
+    <style>
+
+<style>
+.accordion {
+  cursor: pointer;
+  background-color: #242424;
+  font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  padding: 2px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1px;
+  transition: 0.4s;
+  font-color: white;
+  line-height: 0.7;
+}
+
+.panel {
+  padding: 0px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  length:3px;
+   line-height: 0.7;
+
+
+.accordion:after {
+  content: 'more'; /* Unicode character for "plus" sign (+) */
+  font-size: 10px;
+  font-color: pink;
+  float: 1px;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "less"; /* Unicode character for "minus" sign (-) */
+  color:white;
+}
+.accordion {
+  cursor: pointer;
+  background-color: #242424;
+  font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  padding: 2px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1px;
+  transition: 0.4s;
+  font-color: white;
+  line-height: 0.7;
+}
+
+.panel {
+  padding: 0px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  length:3px;
+   line-height: 0.7;
+
+
+.accordion:after {
+  content: 'more'; /* Unicode character for "plus" sign (+) */
+  font-size: 10px;
+  font-color: pink;
+  float: 1px;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "less"; /* Unicode character for "minus" sign (-) */
+  color:white;
+}
+
+</style>
   </head>
 
  
@@ -20,8 +94,11 @@
             <header><h1>Zoha Qamar</h1>
                 <h3><font size="+2">Projects</font> </h3>
                 <h3> Columbia University Research</h3>
-                  <h2 class="tab"><a href="https://amal994.github.io/a5" target="_blank" style="color:powderblue"><i>Analyzing the Opioid Crisis in the United States</i></a> 
-                    <p class="tab"><font size ="-3">In collaboration with Amal Alabdulkarim, Montana St. Pierre, and Amy Zhang | Data Visualization, Columbia University <p></h2>
+                  <pre class="tab"><a href="https://amal994.github.io/a5" target="_blank" style="color:powderblue"><i>Analyzing the Opioid Crisis in the United States</i></a><button class="accordion"; color="white"><font color="white"; size="-2">     </font></button><div class="panel">
+  <p><font size ="-2" class="tab" line height = "-3">In collaboration with Amal Alabdulkarim, Montana St. Pierre, and Amy Zhang</font></p>
+  <p><font size ="-2" class="tab">COMSW4995.006 Data Visualization, Columbia University Spring 2019</font></p>
+</div> </pre>
+                  
 
 
                   <pre class="tab"> ISIS vs. the Qur'an</pre>
@@ -50,5 +127,54 @@
                 <h3>Phillips Exeter Academy, Sexual Assault Mishandling, & The Boston Globe</h3>
                  <pre class="tab"> <a href="https://theexonian.com/2014/09/11/our-fixation-on-symptoms/" style="color:powderblue"><i>The Exonian</i></a>, <a href="https://jezebel.com/when-i-tried-to-talk-to-my-prep-school-about-rape-cultu-1725635150" style="color:powderblue"><i>Jezebel</i></a>, & <a href="https://www.bostonglobe.com/metro/2016/07/12/phillips-exeter-academy-under-fire-again-for-its-handling-sexual-misconduct-allegations/UlfO1FgtbFEvWAQcEK7grN/story.html" style="color:powderblue"><i>the Boston Globe</i></a>  –  Wrote series of pieces picked up by the Globe, sparking assault mishandling investigation at Exeter</pre>
         
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<button class="accordion"><font color="pink">Section 1</font></button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</script>
+        </div>
+
+        
   </body>
 </html>
+
+
