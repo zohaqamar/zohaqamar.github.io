@@ -16,3 +16,37 @@ font-style: normal; font-variant: normal; font-weight: 100; line-height: 18.5714
 
 .tab { margin-left: 40px; }
 .tab2 { margin-left: 40px; }
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+/*   padding: 20px; */
+  font-size: 150%;
+  cursor: pointer;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 40px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
