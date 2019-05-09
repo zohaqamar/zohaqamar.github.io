@@ -45,6 +45,7 @@ text-decoration: none;
 
 body {
   margin: 40px;
+   overflow-wrap: break-word;
 }
 
 .row {
@@ -54,3 +55,8 @@ body {
 .column {
   flex: 50%;
 }
+
+p.letters {
+    word-wrap: break-word;
+}
+
