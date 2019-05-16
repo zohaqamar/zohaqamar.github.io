@@ -3,11 +3,11 @@ h1 { font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 	line-height: 15px; text-align:center; color : white} 
 
 
-h3 { font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 14px; 
+h3 { font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 18px; 
 font-style: lighter; font-variant: lighter; font-weight: lighter; line-height: 15px; color : white} 
 
-p { font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 14px; 
-font-style: normal; font-variant: normal; font-weight: 100; line-height: 10px; color : white
+p { font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 18px; 
+font-style: normal; font-variant: normal; font-weight: 100; line-height: 9px; color : white
 
 } 
 blockquote { font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; 
@@ -16,7 +16,7 @@ pre { font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; 
 font-style: normal; font-variant: normal; font-weight: 100; line-height: 15px; color : white}
 
 
-h2 { font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 13px; 
+h2 { font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 19px; 
 font-style: normal; font-variant: normal; font-weight: 100; line-height: 5px; color : white}
 
 
