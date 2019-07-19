@@ -1,23 +1,21 @@
-h1 { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; 
-	font-size: 36px; font-style: normal; font-variant: normal; font-weight: lighter; 
-	line-height: 7px; text-align:center; color : white} 
+h1 { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 36px; font-style: normal; font-variant: normal; font-weight: lighter; line-height: 7px; text-align:center; color : black} 
 
 
 h3 { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 18px; 
-font-style: lighter; font-variant: lighter; font-weight: lighter; line-height: 15px; color : white} 
+font-style: lighter; font-variant: lighter; font-weight: lighter; line-height: 15px; color : black} 
 
 p { font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 18px; 
-font-style: normal; font-variant: normal; font-weight: 100; line-height: 16px; color : white
+font-style: normal; font-variant: normal; font-weight: 100; line-height: 16px; color : black
 
 } 
 blockquote { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; 
 font-size: 21px; font-style: lighter; font-variant: normal; font-weight: 400; line-height: 30px; } 
 pre { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 13px; 
-font-style: normal; font-variant: normal; font-weight: 100; line-height: 15px; color : white}
+font-style: normal; font-variant: normal; font-weight: 100; line-height: 15px; color : black}
 
 
 h2 { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 19px; 
-font-style: normal; font-variant: normal; font-weight: 100; line-height: 5px; color : white}
+font-style: normal; font-variant: normal; font-weight: 100; line-height: 5px; color : black}
 
 
 .tab { margin-left: 40px; }
