@@ -1,0 +1,99 @@
+h1 { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; 
+	font-size: 36px; font-style: normal; font-variant: normal; font-weight: lighter; 
+	line-height: 7px; text-align:center; color : white} 
+
+
+h3 { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 18px; 
+font-style: lighter; font-variant: lighter; font-weight: lighter; line-height: 15px; color : white} 
+
+p { font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 18px; 
+font-style: normal; font-variant: normal; font-weight: 100; line-height: 16px; color : white
+
+} 
+blockquote { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; 
+font-size: 21px; font-style: lighter; font-variant: normal; font-weight: 400; line-height: 30px; } 
+pre { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 13px; 
+font-style: normal; font-variant: normal; font-weight: 100; line-height: 15px; color : white}
+
+
+h2 { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 19px; 
+font-style: normal; font-variant: normal; font-weight: 100; line-height: 5px; color : white}
+
+
+.tab { margin-left: 40px; }
+.tab2 { margin-left: 40px; }
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+
+.box {
+font-family: Lato, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 14px; 
+font-style: lighter; font-variant: lighter; font-weight: lighter; line-height: 15px; color : white 
+
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+text-decoration: none;
+}
+
+body {
+  margin: 40px;
+   overflow-wrap: break-word;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+p.letters {
+    word-wrap: break-word;
+}
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+
+
+li {
+    padding: 10px 0 0 0;
+    margin: 30px 0;
+    line-height: 10px;
+}
