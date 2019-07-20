@@ -97,3 +97,41 @@ li {
 }
 
 
+
+/* quick reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* relevant styles */
+.img__wrap {
+  position: relative;
+  height: 100px;
+  width: 200px;
+  opacity: 1;
+
+}
+
+.img__description {
+  position: absolute;
+  top: 10;
+  bottom: 10;
+  left: 10;
+  right:10;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 1;
+  font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 14px; text-align:center;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+
