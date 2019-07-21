@@ -6,24 +6,27 @@
 <head style="background-color:#f4f4f4;">
 	<meta charset="utf-8">
 
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="format.css">
 
-<link rel="stylesheet" href="bootstrap.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" src="d3/d3.v3.js"></script>
-	<link rel="stylesheet" type="text/css" href="format.css">
+  <script type="text/javascript" src="d3/d3.v3.js"></script>
+	
 	<h1>The Qur'an vs. ISIS Recruitment Materials</h1><br><br><br>
 
 <!-- Add a bit of text -->
 	<h1>
 		<i><font size="-1"> A Comparison of Two Texts | by Zoha Qamar, 2019 </i></font><br><br>
 	</h1><br><br>
-
-
-
 </head>
+
+
+
+
+
 
 <body style="background-color:#f4f4f4;">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -49,45 +52,18 @@ This project will compare a compilation of ISIS recruitment texts with the Holy 
 
   <br><br>
 
-<script type="text/javascript">
+<p id="demo"></p>
 
-var width = 400, height = 100;
-
-var data = [10, 15, 20, 25, 30];
-var svg = d3.select("body")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-var xscale = d3.scaleLinear()
-    .domain([0, d3.max(data)])
-    .range([0, width - 100]);
-
-var yscale = d3.scaleLinear()
-        .domain([0, d3.max(data)])
-        .range([height/2, 0]);
-
-var x_axis = d3.axisBottom()
-        .scale(xscale);
-
-var y_axis = d3.axisLeft()
-        .scale(yscale);
-
-    svg.append("g")
-       .attr("transform", "translate(50, 10)")
-       .call(y_axis);
-
-var xAxisTranslate = height/2 + 10;
-
-    svg.append("g")
-            .attr("transform", "translate(50, " + xAxisTranslate  +")")
-            .call(x_axis)
-
-</script>
-</body>
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+document.getElementById("demo").style.fontSize = "25px";
+document.getElementById("demo").style.color = "red";
+document.getElementById("demo").style.backgroundColor = "yellow";
+</script> 
 
 
-    </script></body>
+
+
 
       <svg class="chart" width="500" height="500">
     <rect width="19" height="40" x="0" y="380"></rect>
@@ -97,6 +73,8 @@ var xAxisTranslate = height/2 + 10;
     <rect width="19" height="230" x="80" y="190"></rect>
     <rect width="19" height="420" x="100" y="0"></rect>
 </svg>
+
+
 
 </body>
 
