@@ -1,4 +1,14 @@
-<!-- -scrollama, timeline to be interactive -->
+<!-- -scrollama, timeline to be interactive 
+
+SOURCES-CODE, KAGGLE,<BR>
+FIX ROUNDING IN GRAPH<BR>
+OTHER GRAPH<BR>
+EXPLAIN METHOD RLY WELL.<BR>
+EXPLAIN EACH SECTION OF GRAPHS <BR>
+EXPLAIN LIWC<BR>
+MAKE INTERACTIVE<BR>
+
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,74 +46,35 @@ div.bar{
 	</h1><br><br>
 </head>
 
-
-
-SOURCES-CODE, KAGGLE,<BR>
-FIX ROUNDING IN GRAPH<BR>
-OTHER GRAPH<BR>
-EXPLAIN METHOD RLY WELL.<BR>
-EXPLAIN EACH SECTION OF GRAPHS <BR>
-EXPLAIN LIWC<BR>
-MAKE INTERACTIVE<BR>
-
+<br><br>
 
 <body style="background-color:#f4f4f4;">
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br>
 
-<h2><font size = "+3">Global tension </font> and fear fueled by radicalized “religious groups” is on the undoubted rise. The ‘Islamic State in Iraq and Syria,’ known as ISIS, stands as one of the most wide-reaching terrorist organizations in the world, deploying attacks and eliciting fear in regions certainly within but more notably far beyond the confines of its Middle Eastern territories. As such, the group has attempted, often successfully so, to spread the notion that their bloody ideals represent the true values of Islam. The majority of the world’s 1.8 billion Muslims, however, disagree. Nonetheless, ISIS’ mission has manifested into a warped international perspective on what Islam perpetrates, which is turn has triggered a wave of fear and hate toward Muslims. In an effort to contextualize the politically and socially relevant dialogue such controversy perpetuates, this project aims to assess whether ISIS’ claims of Islamic proximity stack up to the message of the religion’s Holy Book, The Qur’an. 
+<h2><font size = "+3">Global tension and fear </font>fueled by radicalized “religious groups” is on the undoubted rise. The ‘Islamic State in Iraq and Syria,’ known as ISIS, stands as one of the most wide-reaching terrorist organizations in the world, deploying attacks and eliciting fear in regions certainly within but more notably far beyond the confines of its Middle Eastern territories. <br><br>
+
+As such, the group has attempted, often successfully so, to spread the notion that their bloody ideals represent the true values of Islam. The majority of the world’s 1.8 billion Muslims, however, disagree. Nonetheless, ISIS’ mission has manifested into a warped international perspective on what Islam perpetrates, which is turn has triggered a wave of fear and hate toward Muslims. In an effort to contextualize the politically and socially relevant dialogue such controversy perpetuates, this project aims to assess whether ISIS’ claims of Islamic proximity stack up to the message of the religion’s Holy Book, The Qur’an. 
 
 
 
 
 <br><br>
 
-Throughout its spree of violence, ISIS, similar to other radical groups, has cited Islam as the source and inspiration of its extremist values. Such values, its leaders say, motivate their adherents' attacks around the world, their ploys to recruit armies to their headquarter areas in the Middle East, and their practices within such spaces that often raise whole other sets of human rights concerns – from sex slavery to hostage execution. 
+<h2><font size = "+3">Throughout its spree of violence</font>, ISIS, similar to other radical groups, has cited Islam as the source and inspiration of its extremist values. Such values, its leaders say, motivate their adherents' attacks around the world, their ploys to recruit armies to their headquarter areas in the Middle East, and their practices within such spaces that often raise whole other sets of human rights concerns – from sex slavery to hostage execution. <br><br>
 
-The group's violent track record only grows more disturbing when it uses Islamic texts to justify them. It is no secret that religious texts – whether in Islam, Christianity, Judaism, Hinduism, or most other faiths – include passages that reference violence, war, martyrdom, and such concepts. Yet, the amount to which such subjects are cherry-picked and exaggerated by terrorist groups has remained a contentious debate that is often argued on anecdotal and empirical grounds, which is a sort of inherent cherry-picking in itself.
+The group's violent track record only grows more disturbing when it uses Islamic texts to justify them. It is no secret that religious texts – whether in Islam, Christianity, Judaism, Hinduism, or most other faiths – include passages that reference violence, war, martyrdom, and such concepts. Yet, the amount to which such subjects are cherry-picked and exaggerated by terrorist groups has remained a contentious debate that is often argued on anecdotal and empirical grounds, which is a sort of inherent cherry-picking in itself.<br><br>
 
-This project will compare a compilation of ISIS recruitment texts with the Holy Qur'an. </h2><br><br><br><br><br>
-
-
-
-<h2>
-    <font size="+3">The two datasets</font> on which this project relies contain all the information required for the exploration and analyses presented herein – text excerpts defining the recruitment campaigns, and thus overarching ideals, of ISIS, as well as those of the Qur'an. The following datasets are both sets of scraped texts that capture the fundamental essence of their respective subjects: one is a set of all the religious texts (published in English) cited in English by ISIS in their main English magazines, which circulate around the world in attempt to radicalize a global army of youth.
-  </h2>
-
-<h2>ISIS Recruitment Texts
-The main dataset, "Religious Texts Used By ISIS," indeed inspired the mission for this study.\cite{FT:2017}} This compilation includes about 2,685 religious texts cited by ISIS in its premier English magazines, \textit{Rumyah} and \textit{Dabiq}, between the years 2014 and 2017 – a period in which attacks and counter crimes were especially escalating. \textit{Rumiyah} and \textit{Dabiq} are known to especially recruit extremist soldiers from Western nations, which are a rising and concerning part of their reach. Western nations fear them as national security threats, while Muslims in the West fear them as personal security ones – after all, ISIS contingents begin to mar the clear difference between their extremist ideals and the peaceful ones. The \textit{Rumiyah} and \textit{Dabiq} selections contain religious texts, mainly of the Qur'an but also of adjacent Holy messages such as: Hadith, a collection of sayings and traditions recounting the daily habits and practices of the prophet Muhammad which act as Muslim's main supplementary source to the Qur'an; and even some Christian and Jewish holy book excerpts which ISIS believes carry often the intent of their zealous messages. 
-
-The dataset was scraped and compiled by Fifth Tribe, a digital agency based in the Washington, D.C. area. The file was cleaned to include only the textual excerpts necessary for analysis. The original version contained a CSV with the following columns for each entry: 
-
-\textit{- magazine}: Dabiq \textit{or} Rumiyah
-
-\textit{- issue #}
-
-\textit{ - date (Month and Year)}
-
-\textit{- type of Text (Qur'an, Hadith, etc.)}
-
-\textit{- source: What the source of the text was}
-
-\textit{- the quote itself}
-
-\textit{- purpose: Support ISIS, Refute Another Group}
-
-\textit{- the article from which the quote is derived} 
-
-\subsection{The Qur'an Text}
-As the foundation of this project relies on comparison between ISIS materials and Qur'anic text, a dataset of Qur'anic text holds equal importance to that of the baseline ISIS one. Of course, as noted, the original text of the Qur'an is in complicated, old Arabic. Still, an English translation makes sense for comparison both due to the scope and ability of the researcher, as well due to nature of the ISIS magazine material itself being in English. This, again, provides an equal sort of ground for what is offered and exposed to Western Muslims who ISIS is hoping to recruit into its specific embrace. 
-
-The compilation, published by Zeeshan-ul-hassan Usmani onto Kaggle in , has been availed by a notable range of researchers around the world even within the last year since the most recent update and is thus regarded as a trustworthy source for such projects.\cite{Usmani:2018} </h2>
+This project compares the content in ISIS recruitment texts with the verses of the Holy Qur'an. Let's start by taking a look at some common religious terms, as well as ISIS hot topics. </h2>
 
 
 <p id="demo"></p>
 
+<br><br>
 
+<!--<canvas id="barChart"></canvas> -->
 
-<canvas id="barChart"></canvas>
-
-<h2><font size = "+3">Topic Frequency, the Qur'an vs. ISIS Texts</font> <br> <br><font size = "-1"><i>
-shown: the number of verses concerning the noted theme, with respect to the total number of all verses in the respective compilation</i></h2></font>
+<h2><font size = "+3">How often each text discusses a topic</font> <br> <br><font size = "-1"><i>
+A percent of verses mentioning such topics, in regards to the total number of verses with the topic</i></h2></font>
 <!--
 
 <br><br><br>
@@ -157,8 +128,6 @@ shown: the number of verses concerning the noted theme, with respect to the tota
 
 
 
-
-
   <svg class="chart" width="800" height="400" aria-labelledby="graph-title" aria-describedby="graph-desc">
 
    
@@ -197,12 +166,12 @@ var econ2 = [
   },
   {
     "Category": "heaven & synonyms",
-    "Quran": 1.42, "ISIS Texts": 1.79
+    "Quran": 3.61, "ISIS Texts": 1.53
 
   },
   {
     "Category": "hell & synonyms",
-    "Quran": 2.54, "ISIS Texts": 0.85
+    "Quran": 1.42, "ISIS Texts": 1.79
 
   }
 ]
@@ -358,10 +327,58 @@ var legend = g.append("g")
 
 
 
-<h2><font size = "-1">NOTE: <br>SOURCES: Kaggle etc </font></h2>
+<h2><font size = "-1"> <br><i>ORIGINAL DATA SOURCES: </i><br>
+  Fifth Tribe. 2017. <a href="https://www.kaggle.com/fifthtribe/isis-religious-texts/" target="_blank">Religious texts used by isis. </a><br>
+  Zeeshan ul-hassan Usmani. 2018. <a href="https://www.kaggle.com/zusmani/the-holy-quran/" target="_blank">The holy quran.. </a></font></font></h2>
 
-<br><br><br><br><br>
+<br><br>
 
+<h2><font size = "+3">According to this chart</font>, the Qur'an as a whole and the ISIS recruitment texts emphasize a deal of notable subjects to differing degrees. This is notable because part of ISIS' messages is their advocacy of a return to traditional Islamic values, but that's not what the content of their worsd actually protray.<br><br>
+
+
+The major discrepencies lie in the mentions of topics related to women, war, and heaven. In fact, the ISIS recruitment materials analyzes talked about women over 3x as much as the Qur'an does. For a terrorist organization that is reported to palce a special onus on the subjugation on women, that is not surprising. <br><br>
+
+As noted by the label's inclusion of synonyms, this program's analysis for war also included similar terms, such as the word "jihad." While it objectively translates from Arabic as "struggle," the word has assumed a more violent charge due to the the application and use of the word by ISIS, Al Qaeda, and such organizations. It's clear from the this data, though, that not only has this word's meaning been twisted, but also its emphasis. <br><br>
+
+On the other hand, the Qur'an places highlights heaven, paradise, and affiliate concepts much more than the ISIS texts ever acknowledge. It's notable for these groups to not only play up violent concepts, but also hush the peaceful ones, which typically accompany other messages that would be align with the violent ones. <br><br>
+
+<h2><font size = "+3">These numbers matter</font> in a world that demands facts, even in a battle for humanity against propaganda and violence. Such findings provide a quantitative supplement to the empirical and anecdotal evidence already witnissed, gathered, and shared by other activists, researchers, journalists, and humanitarians around the world. <br><br>
+
+
+
+
+</h2>
+
+  <svg height="10" width=100%>
+
+<line x1="0" y1="7" x2="250" y2="7" stroke="grey" style="stroke-width:.3"/>
+
+</svg><br>
+
+<h2><font size = "+3"><br>
+How we got these numbers</font> is as critical as why. This project employs natural language processing techniques to analyze the sentiment of two texts. We use a public compilation of the most comment ISIS recruitment materials published in English, as well as a respected translation of the Qu'ran in English. We acknowledge the inaccuracies introduced by using a translation of the Qur'an, as opposed to its original in Arabic, but the project aims to breakdown the messaging between ISIS and the Qur'an as it applies to Westerners, especially with the rise of Western youth who have been recruited over time. As such, we feel it is only appropriate to conduct the Qur'anic research in English too, since the Qur'anic messaging these youth would be exposed to, for understanding and learning, would likely be in English.<br><br>
+
+The programs scrapes each compilation for not only mention of the a buzzword topic, but also for its synonyms, as well as different spellings of words often varied when transliterated into English. For example, the following words are also not always spelled consistently between transliterations, but they are critical to our analysis:<br>
+
+– <i>kafir/kaffir</i> : disbeliever<br>
+
+– <i>jahanam/jahannam</i> : hell<br>
+
+– <i>jannah</i> : heaven <br>
+
+
+<br>
+We also note words that act a proxy for certain themes. <i>Kafir/kaffir</i>, for example, is a popularized word that is meant to depict any non-believer of Islam. It is derogatory, and often used by ISIS and such parties to justify violence against non-Muslim people – as well as again Muslims they do not feel adhere to their extreme beliefs – and it would be used in context of war. <br><br>
+
+The discussion of hell in any of the literature emphasizes the sentiment and focus of a segment on punitive approaches to religion, including punishment, flames, and threats. <br><br>
+
+On the flip side, accentuating themes and descriptions related to heaven offers a more optimistically natured approach to religion. These often feature mention of rewards, gardens, rivers, serenity, and peace, all of which in the afterlife are derived from peaceful actions in the earthly one. <br><br>
+
+
+
+
+</h2>
+<!--
   <svg height="10" width=100%>
 
 <line x1="0" y1="7" x2="250" y2="7" stroke="grey" style="stroke-width:.3"/>
@@ -371,18 +388,19 @@ var legend = g.append("g")
 </script>
 
 
-<h2>other attributes</h2>
+<h2><font size = "+3"><br>Other attributes</font></h2>
+<h2><br>Other attributes of sentiment analysis </h2>
 
-<!-- Create a div where the graph will take place -->
+Create a div where the graph will take place 
 <div id="my_dataviz"></div>
 
 
 <script>
 
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 30, left: 60},
+var margin = {top: 20, right: 20, bottom: 20, left: 25},
     width = 460 - margin.left - margin.right,
-    height = 450 - margin.top - margin.bottom;
+    height = 460 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -394,11 +412,11 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/2_TwoNum.csv", function(data) {
+d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(data) {
 
   // Add X axis
   var x = d3.scaleLinear()
-    .domain([0, 3000])
+    .domain([0, 5])
     .range([ 0, width ]);
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -406,10 +424,11 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, 400000])
+    .domain([0, 5])
     .range([ height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
+  svg.append
 
   // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
   // Its opacity is set to 0: we don't see it by default.
@@ -434,9 +453,9 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
 
   var mousemove = function(d) {
     tooltip
-      .html("The exact value of<br>the Ground Living area is: " + d.GrLivArea)
+      .html("This dot maps: " + d.attribute)
       .style("left", (d3.mouse(this)[0]+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-      .style("top", (d3.mouse(this)[1]) + "px")
+      .style("top", (d3.mouse(this)[1])+90 + "px")
   }
 
   // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
@@ -453,8 +472,8 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
     .data(data.filter(function(d,i){return i<50})) // the .filter part is just to keep a few dots on the chart, not all of them
     .enter()
     .append("circle")
-      .attr("cx", function (d) { return x(d.GrLivArea); } )
-      .attr("cy", function (d) { return y(d.SalePrice); } )
+      .attr("cx", function (d) { return x(d.Quran); } )
+      .attr("cy", function (d) { return y(d.ISIS); } )
       .attr("r", 7)
       .style("fill", "#69b3a2")
       .style("opacity", 0.3)
@@ -465,11 +484,62 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
 
 })
 
-</script>
+</script> -->
+<br><br><br><br><br><br><br><br>
+  <svg height="10" width=100%>
+
+<line x1="0" y1="7" x2="1000" y2="7" stroke="black" style="stroke-width:1"/>
+
+<line x1="0" y1="10" x2="1000" y2="10" stroke="black" style="stroke-width:1"/>
+</svg>
+
+<h2>
+    <font size="+3"><br>Further explanation on the two datasets</font> on which this project relies on for the exploration and analyses can be found here. Each is a set of scraped texts that capture the fundamental essence of their respective subjects. 
+
+    <br><br><font size="+2">ISIS Recruitment Texts</font><br>The first is a set of all the religious texts (published in English) cited in English by ISIS in their main English magazines, which circulate around the world in attempt to radicalize a global army of youth.
+
+"Religious Texts Used By ISIS," indeed inspired the mission for this study.This compilation includes about 2,685 religious texts cited by ISIS in its premier English magazines, <i>Rumiyah </i> and <i>Dabiq</i>, between the years 2014 and 2017 – a period in which attacks and counter crimes were especially escalating. <i>Rumiyah </i> and <i>Dabiq</i>, are known to especially recruit extremist soldiers from Western nations, which are a rising and concerning part of their reach. Western nations fear them as national security threats, while Muslims in the West fear them as personal security ones – after all, ISIS contingents begin to mar the clear difference between their extremist ideals and the peaceful ones. The <i>Rumiyah </i> and <i>Dabiq</i>, selections contain religious texts, mainly of the Qur'an but also of adjacent Holy messages such as: Hadith, a collection of sayings and traditions recounting the daily habits and practices of the prophet Muhammad which act as Muslim's main supplementary source to the Qur'an; and even some Christian and Jewish holy book excerpts which ISIS believes carry often the intent of their zealous messages. <br><br>
+
+The dataset was scraped and compiled by Fifth Tribe, a digital agency based in the Washington, D.C. area. The file was cleaned to include only the textual excerpts necessary for analysis. The original version contained a CSV with the following columns for each entry: <br>
+
+– magazine: <i>Dabiq</i> or <i>Rumiyah</i><br>
+
+– issue #<br>
+
+– date (Month and Year)<br>
+
+– type of Text (Qur'an, Hadith, etc.)<br>
+
+– source: What the source of the text was<br>
+
+–  the quote itself<br>
+
+–  purpose: Support ISIS, Refute Another Group<br>
+
+–  the article from which the quote is derived <br><br>
+
+<font size="+2">The Qur'an Text</font><br>
+As the foundation of this project relies on comparison between ISIS materials and Qur'anic text, a dataset of Qur'anic text holds equal importance to that of the baseline ISIS one. Of course, as noted, the original text of the Qur'an is in complicated, old Arabic. Still, an English translation makes sense for comparison both due to the scope and ability of the researcher, as well due to nature of the ISIS magazine material itself being in English. This, again, provides an equal sort of ground for what is offered and exposed to Western Muslims who ISIS is hoping to recruit into its specific embrace. 
+
+The compilation, published by Zeeshan-ul-hassan Usmani onto Kaggle in , has been availed by a notable range of researchers around the world even within the last year since the most recent update and is thus regarded as a trustworthy source for such projects.\cite{Usmani:2018} <br><br></h2>
+
+  <svg height="10" width=100%>
+
+<line x1="0" y1="7" x2="250" y2="7" stroke="grey" style="stroke-width:.3"/>
+
+</svg>
+
+<h2>
+<font size="+3"><br>LIWC inspired this project</font>, that is Linguistic Inquiry and Word Count. This program serves as a highly regarded platform for sentiment analysis on English texts. A main summation feature of the program, "Analyze Texts," takes an input of any text file(s) and returns a table of different sentiment metrics for a whole slew of several dozen categories. From punctuations to pronouns, emotions to themes, it analyzes indeed a wide variety of elements in a textual file. However, these categories are precurated by the product, and the featured aspects of as emotion, audience direction, and mood did not fully cater to what we wanted to explore in our research. After preliminrary analysis of each text through LIWC, we decided to build our own program to analyze and compare topics. </h2>
+<br>
+  <svg height="10" width=100%>
+
+<line x1="0" y1="7" x2="250" y2="7" stroke="grey" style="stroke-width:.3"/>
+
+</svg>
 
 
-
-<h2><font size = "+1">ACKNOWLEDGEMENTS </font><br><br>– LIWC<br><br>– Levine<r><br><br>– DATA</i><br><br>
+<h2><font size = "+1">ACKNOWLEDGEMENTS </font><br><br><i>Thank you to the creators of LIWC, the curators of the public data, and Professor Michelle Levine of Columbia University for her advising in this project.</i><br><br>
 
   <svg height="10" width=100%>
 
@@ -500,6 +570,11 @@ Mohammad Sadegh Rasooli and Joel R. Tetreault. 2015. Yara parser: A fast and acc
 
 
 </h2>
+
+
+
+
+
 </body>
 
 

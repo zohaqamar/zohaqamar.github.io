@@ -1,4 +1,4 @@
-h1 { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 36px; font-style: normal; font-variant: normal; font-weight: lighter; line-height: 7px; text-align:center; color : black} 
+h1 { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 36px; font-style: normal; font-variant: normal; font-weight: lighter; line-height: 30px; text-align:center; color : black} 
 
 
 h3 { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 18px; 
@@ -380,4 +380,29 @@ li {
   fill:#354B5F;
   font-weight: bold;
   font: 20px sans-serif;
+}
+
+
+a:link {
+  color: blue; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
 }
