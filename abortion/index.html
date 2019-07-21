@@ -1,3 +1,5 @@
+<!-- -scrollama, timeline to be interactive -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,6 +71,41 @@ function openTab(tabName) {
   document.getElementById(tabName).style.display = "block";
 }
 
+
+var width = 400, height = 100;
+
+var data = [10, 15, 20, 25, 30];
+var svg = d3.select("body")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var xscale = d3.scaleLinear()
+    .domain([0, d3.max(data)])
+    .range([0, width - 100]);
+
+var yscale = d3.scaleLinear()
+        .domain([0, d3.max(data)])
+        .range([height/2, 0]);
+
+var x_axis = d3.axisBottom()
+        .scale(xscale);
+
+var y_axis = d3.axisLeft()
+        .scale(yscale);
+
+    svg.append("g")
+       .attr("transform", "translate(50, 10)")
+       .call(y_axis);
+
+var xAxisTranslate = height/2 + 10;
+
+    svg.append("g")
+            .attr("transform", "translate(50, " + xAxisTranslate  +")")
+            .call(x_axis)
+
+
+
 </script>
 
 
@@ -83,14 +120,14 @@ function openTab(tabName) {
 
 
 
-<br>
+
 
 
 
 <svg height="25" width="1000">>
 
 <line x1="0" y1="7" x2="800" y2="7" stroke="grey" style="stroke-width:.3"/>
-
+<line x1="0" y1="7" x2="100" y2="7" stroke="navy" style="stroke-width:.5"/>
 	
 <text x="95" y="25" font-size="10" font-family="Gill Sans">1880
 </text>	
@@ -127,7 +164,7 @@ function openTab(tabName) {
 
 
 <rect x="310" y="0" width="10" height="10" rx="2" ry="2" 
-      style="fill:navy">
+      style="fill:#a5b0c2">
    <set attributeName="fill" from="navy" to="grey" 
          begin="mouseover" end="mouseout"/>
    <set attributeName="width" from="10" to="200" 
@@ -142,7 +179,7 @@ function openTab(tabName) {
 
 
 <rect x="550" y="0" width="10" height="10" rx="2" ry="2" 
-      style="fill:navy">
+      style="fill:#a5b0c2">
    <set attributeName="fill" from="navy" to="grey" 
          begin="mouseover" end="mouseout"/>
    <set attributeName="width" from="10" to="200" 
@@ -154,7 +191,7 @@ function openTab(tabName) {
 
 
 <rect x="570" y="0" width="10" height="10" rx="2" ry="2" 
-      style="fill:navy">
+      style="fill:#a5b0c2">
    <set attributeName="fill" from="navy" to="grey" 
          begin="mouseover" end="mouseout"/>
    <set attributeName="width" from="10" to="200" 
@@ -168,7 +205,7 @@ function openTab(tabName) {
 
 
 <rect x="715" y="0" width="10" height="10" rx="2" ry="2" 
-      style="fill:navy">
+      style="fill:#a5b0c2">
    <set attributeName="fill" from="navy" to="grey" 
          begin="mouseover" end="mouseout"/>
    <set attributeName="width" from="10" to="200" 
@@ -180,7 +217,7 @@ function openTab(tabName) {
 
 
 <rect x="795" y="0" width="10" height="10" rx="2" ry="2" 
-      style="fill:navy">
+      style="fill:#a5b0c2">
    <set attributeName="fill" from="navy" to="grey" 
          begin="mouseover" end="mouseout"/>
    <set attributeName="width" from="10" to="200" 
@@ -207,7 +244,7 @@ function openTab(tabName) {
 <br>
 <br>
 <br>
-<br><br><br>
+
 
 
 
@@ -330,16 +367,128 @@ For nearly a century of America's young independence, pregnancy termination for 
 <div id="b5" class="containerTab" style="display:none;background:##f4f4f4">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">X</span>
   <h2>Box 5</h2>
-  <p>Lorem ipsum..</p>
+  <p>Lorem ipsum..</p></i><!-- where is this <i> from-->
 </div>
 
 	
 <br><br><br>
-	<svg height="10" width="1000">>
 
-<line x1="0" y1="7" x2="500" y2="7" stroke="grey" style="stroke-width:.3"/>
 
-</svg>
+
+<br><br>
+
+<svg height="25" width="1000">>
+
+<line x1="0" y1="7" x2="800" y2="7" stroke="grey" style="stroke-width:.3"/>
+<line x1="100" y1="7" x2="310" y2="7" stroke="navy" style="stroke-width:.5"/>
+	
+<text x="95" y="25" font-size="10" font-family="Gill Sans">1880
+</text>	
+
+<text x="305" y="25" font-size="10" font-family="Gill Sans">1921
+</text>
+
+<text x="545" y="25" font-size="10" font-family="Gill Sans">1969
+</text>
+
+<text x="565" y="25" font-size="10" font-family="Gill Sans">1973
+</text>
+
+<text x="710" y="25" font-size="10" font-family="Gill Sans">2002/2003
+</text>
+
+<text x="790" y="25" font-size="10" font-family="Gill Sans">2019
+</text>
+
+<rect x="100" y="0" width="10" height="10" rx="2" ry="2" 
+      style="fill:#a5b0c2">
+   <set attributeName="fill" from="navy" to="grey" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="width" from="10" to="200" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="height" from="10" to="100" 
+         begin="mouseover" end="mouseout"/>
+   <text x="20" y="20" font-family="sans-serif" font-size="20px" fill="red" >Hello!</text>
+</rect>
+
+
+
+
+
+
+<rect x="310" y="0" width="10" height="10" rx="2" ry="2" 
+      style="fill:navy">
+   <set attributeName="fill" from="navy" to="grey" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="width" from="10" to="200" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="height" from="10" to="100" 
+         begin="mouseover" end="mouseout"/>
+
+   
+</rect>
+
+
+
+
+<rect x="550" y="0" width="10" height="10" rx="2" ry="2" 
+      style="fill:#a5b0c2">
+   <set attributeName="fill" from="navy" to="grey" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="width" from="10" to="200" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="height" from="10" to="100" 
+         begin="mouseover" end="mouseout"/>
+</rect>
+
+
+
+<rect x="570" y="0" width="10" height="10" rx="2" ry="2" 
+      style="fill:#a5b0c2">
+   <set attributeName="fill" from="navy" to="grey" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="width" from="10" to="200" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="height" from="10" to="100" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="fill-opacity" from="1" to="1" 
+         begin="mouseover" end="mouseout"/>
+
+</rect>
+
+
+<rect x="715" y="0" width="10" height="10" rx="2" ry="2" 
+      style="fill:#a5b0c2">
+   <set attributeName="fill" from="navy" to="grey" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="width" from="10" to="200" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="height" from="10" to="100" 
+         begin="mouseover" end="mouseout"/>
+
+</rect>
+
+
+<rect x="795" y="0" width="10" height="10" rx="2" ry="2" 
+      style="fill:#a5b0c2">
+   <set attributeName="fill" from="navy" to="grey" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="width" from="10" to="200" 
+         begin="mouseover" end="mouseout"/>
+   <set attributeName="height" from="10" to="100" 
+         begin="mouseover" end="mouseout"/>
+</rect>
+
+<!--
+ 
+<div class="grow" style="background-color: #f4f4f4;">
+  <h2>Title</h2> 
+  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+</div>
+
+-->
+
+</svg> 
 
 <br><br>
 	<h2>

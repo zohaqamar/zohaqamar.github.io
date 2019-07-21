@@ -1,0 +1,32 @@
+var models = [
+    {
+        "category": "god/Allah etc.", 
+        "quran": 1.97, 
+        "isis": 2.61
+    }, 
+    {
+        "category": "women etc.", 
+        "quran": 1.13, 
+        "isis": 3.39
+    }, 
+    {
+        "category": "war synonyms", 
+        "quran": 0.16,
+        "isis": 4.92
+    }, 
+    {
+        "category": "sex", 
+        "quran": 0.06, 
+        "isis": 0.11
+    }, 
+    {
+        "category": "heaven synonyms", 
+        "quran": 1.42,
+        "isis": 1.79
+    }, 
+    {
+        "category": "hell synonyms", 
+        "quran": 2.546,
+        "isis":0.85
+    },
+];

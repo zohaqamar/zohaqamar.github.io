@@ -1,0 +1,104 @@
+<!-- -scrollama, timeline to be interactive -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head style="background-color:#f4f4f4;">
+	<meta charset="utf-8">
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+<link rel="stylesheet" href="bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="d3/d3.v3.js"></script>
+	<link rel="stylesheet" type="text/css" href="format.css">
+	<h1>The Qur'an vs. ISIS Recruitment Materials</h1><br><br><br>
+
+<!-- Add a bit of text -->
+	<h1>
+		<i><font size="-1"> A Comparison of Two Texts | by Zoha Qamar, 2019 </i></font><br><br>
+	</h1><br><br>
+
+
+
+</head>
+
+<body style="background-color:#f4f4f4;">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<h2><font size = "+3">Global tension </font> and fear fueled by radicalized “religious groups” is on the undoubted rise. The ‘Islamic State in Iraq and Syria,’ known as ISIS, stands as one of the most wide-reaching terrorist organizations in the world, deploying attacks and eliciting fear in regions certainly within but more notably far beyond the confines of its Middle Eastern territories. As such, the group has attempted, often successfully so, to spread the notion that their bloody ideals represent the true values of Islam. The majority of the world’s 1.8 billion Muslims, however, disagree. Nonetheless, ISIS’ mission has manifested into a warped international perspective on what Islam perpetrates, which is turn has triggered a wave of fear and hate toward Muslims. In an effort to contextualize the politically and socially relevant dialogue such controversy perpetuates, this project aims to assess whether ISIS’ claims of Islamic proximity stack up to the message of the religion’s Holy Book, The Qur’an. 
+
+
+
+
+<br><br>
+
+Throughout its spree of violence, ISIS, similar to other radical groups, has cited Islam as the source and inspiration of its extremist values. Such values, its leaders say, motivate their adherents' attacks around the world, their ploys to recruit armies to their headquarter areas in the Middle East, and their practices within such spaces that often raise whole other sets of human rights concerns – from sex slavery to hostage execution. 
+
+The group's violent track record only grows more disturbing when it uses Islamic texts to justify them. It is no secret that religious texts – whether in Islam, Christianity, Judaism, Hinduism, or most other faiths – include passages that reference violence, war, martyrdom, and such concepts. Yet, the amount to which such subjects are cherry-picked and exaggerated by terrorist groups has remained a contentious debate that is often argued on anecdotal and empirical grounds, which is a sort of inherent cherry-picking in itself.
+
+This project will compare a compilation of ISIS recruitment texts with the Holy Qur'an. </h2><br><br><br><br><br>
+
+
+
+<h2>
+    <font size="+3">The two datasets</font> on which this project relies contain all the information required for the exploration and analyses presented herein – text excerpts defining the recruitment campaigns, and thus overarching ideals, of ISIS, as well as those of the Qur'an. The following datasets are both sets of scraped texts that capture the fundamental essence of their respective subjects: one is a set of all the religious texts (published in English) cited in English by ISIS in their main English magazines, which circulate around the world in attempt to radicalize a global army of youth.
+  </h2>
+
+  <br><br>
+
+<script type="text/javascript">
+
+var width = 400, height = 100;
+
+var data = [10, 15, 20, 25, 30];
+var svg = d3.select("body")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var xscale = d3.scaleLinear()
+    .domain([0, d3.max(data)])
+    .range([0, width - 100]);
+
+var yscale = d3.scaleLinear()
+        .domain([0, d3.max(data)])
+        .range([height/2, 0]);
+
+var x_axis = d3.axisBottom()
+        .scale(xscale);
+
+var y_axis = d3.axisLeft()
+        .scale(yscale);
+
+    svg.append("g")
+       .attr("transform", "translate(50, 10)")
+       .call(y_axis);
+
+var xAxisTranslate = height/2 + 10;
+
+    svg.append("g")
+            .attr("transform", "translate(50, " + xAxisTranslate  +")")
+            .call(x_axis)
+
+</script>
+</body>
+
+
+    </script></body>
+
+      <svg class="chart" width="500" height="500">
+    <rect width="19" height="40" x="0" y="380"></rect>
+    <rect width="19" height="80" x="20" y="340"></rect>
+    <rect width="19" height="150" x="40" y="270"></rect>
+    <rect width="19" height="160" x="60" y="260"></rect>
+    <rect width="19" height="230" x="80" y="190"></rect>
+    <rect width="19" height="420" x="100" y="0"></rect>
+</svg>
+
+</body>
+
+
+
