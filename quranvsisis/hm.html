@@ -1,95 +1,6 @@
-<!-- -scrollama, timeline to be interactive -->
-
 <!DOCTYPE html>
-<html lang="en">
+<meta charset="utf-8">
 
-<head style="background-color:#f4f4f4;">
-	<meta charset="utf-8">
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="format.css">
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<script src="https://d3js.org/d3.v4.js"></script>
-<style>
-div.bar{
-
-
-  display:inline-block;
-  width:20px;
-  height:120px;
-  margin-right:2px;
-  background-color:darkmagenta;
-}
-
-
-</style>
-	
-	<h1>The Qur'an vs. ISIS Recruitment Materials</h1><br><br><br>
-
-<!-- Add a bit of text -->
-	<h1>
-		<i><font size="-1"> A Comparison of Two Texts | by Zoha Qamar, 2019 </i></font><br><br>
-	</h1><br><br>
-</head>
-
-
-
-
-
-
-<body style="background-color:#f4f4f4;">
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<h2><font size = "+3">Global tension </font> and fear fueled by radicalized “religious groups” is on the undoubted rise. The ‘Islamic State in Iraq and Syria,’ known as ISIS, stands as one of the most wide-reaching terrorist organizations in the world, deploying attacks and eliciting fear in regions certainly within but more notably far beyond the confines of its Middle Eastern territories. As such, the group has attempted, often successfully so, to spread the notion that their bloody ideals represent the true values of Islam. The majority of the world’s 1.8 billion Muslims, however, disagree. Nonetheless, ISIS’ mission has manifested into a warped international perspective on what Islam perpetrates, which is turn has triggered a wave of fear and hate toward Muslims. In an effort to contextualize the politically and socially relevant dialogue such controversy perpetuates, this project aims to assess whether ISIS’ claims of Islamic proximity stack up to the message of the religion’s Holy Book, The Qur’an. 
-
-
-
-
-<br><br>
-
-Throughout its spree of violence, ISIS, similar to other radical groups, has cited Islam as the source and inspiration of its extremist values. Such values, its leaders say, motivate their adherents' attacks around the world, their ploys to recruit armies to their headquarter areas in the Middle East, and their practices within such spaces that often raise whole other sets of human rights concerns – from sex slavery to hostage execution. 
-
-The group's violent track record only grows more disturbing when it uses Islamic texts to justify them. It is no secret that religious texts – whether in Islam, Christianity, Judaism, Hinduism, or most other faiths – include passages that reference violence, war, martyrdom, and such concepts. Yet, the amount to which such subjects are cherry-picked and exaggerated by terrorist groups has remained a contentious debate that is often argued on anecdotal and empirical grounds, which is a sort of inherent cherry-picking in itself.
-
-This project will compare a compilation of ISIS recruitment texts with the Holy Qur'an. </h2><br><br><br><br><br>
-
-
-
-<h2>
-    <font size="+3">The two datasets</font> on which this project relies contain all the information required for the exploration and analyses presented herein – text excerpts defining the recruitment campaigns, and thus overarching ideals, of ISIS, as well as those of the Qur'an. The following datasets are both sets of scraped texts that capture the fundamental essence of their respective subjects: one is a set of all the religious texts (published in English) cited in English by ISIS in their main English magazines, which circulate around the world in attempt to radicalize a global army of youth.
-  </h2>
-
-
-
-<p id="demo"></p>
-
-
-
-<canvas id="barChart"></canvas>
-
-<h2>Topic Frequency, the Qur'an vs. ISIS Texts </h2>
-
-
-<br><br><br>
-
- <script>
- var dataset = [1.97, 1.13, 0.16, 0.06, 1.42, 2.54];
-    d3.select("body").selectAll("div")
-    .data(dataset)
-    .enter()
-    .append("div")
-    .attr("class","bar")
-    .style("height",function(d){
-
-      var barHeight=d*100;
-      return barHeight+"px";
-    });
-
-  </script>
 
 <style>
 
@@ -104,8 +15,8 @@ This project will compare a compilation of ISIS recruitment texts with the Holy 
 }
 
 .axis {
-    font: 13px sans-serif;
-  }
+	  font: 13px sans-serif;
+	}
 
   .yUnits {
     font: 14px sans-serif;
@@ -132,7 +43,7 @@ This project will compare a compilation of ISIS recruitment texts with the Holy 
     <desc id="graph-desc">GDP Growth Remains Broad Based, with values for 2017 quarters 1-3.</desc>
     <text transform="translate(10, 20)" class="chartDisplayTitle">Theme Comparison</text>
 
-    <text transform="translate(10, 70)" class="yUnits">%: number of verses with over number of all verses in respective compilation*</text>
+    <text transform="translate(10, 70)" class="yUnits">%: number of verses with theme over number of all verses in respective compilation*</text>
     <text transform="translate(10, 570)" class="caption">*Contribution to total gross domestic product (GDP) growth; seasonally adjusted annualized rate.</text>
     <text transform="translate(10, 585)" class="caption">SOURCE: Bureau of Economic Analysis.</text>
   </svg>
@@ -321,9 +232,3 @@ var legend = g.append("g")
 
 
 </script>
-
-
-</body>
-
-
-

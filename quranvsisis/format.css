@@ -355,49 +355,29 @@ li {
 
 
 
-/* Legend Font Style */
-body {
-  font: 11px sans-serif;
-  background-color: #ffffff;
-}
-        
-/* Legend Position Style */
-.legend {
-  position:absolute;
-  left:20px;
-  top:30px;
+.axis line{
+      visibility:hidden;
+    }
+
+/* hides bottom xaxis line*/
+.axis .domain {
+  display: none;
 }
 
-.axis text {
-  font: 10px sans-serif;
-}
+.axis {
+    font: 13px sans-serif;
+  }
 
-.axis line, .axis path {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
+  .yUnits {
+    font: 14px sans-serif;
+  }
 
+  .caption {
+    font: 12px sans-serif;
+  }
 
-.chart rect { fill: steelblue }
-.axis path,
-.axis line {
-    fill: none;
-    stroke: black;
-    shape-rendering: crispEdges;
-}
-
-.axis text {
-    font-family: sans-serif;
-   
-
-   }
-
-   .chart div {
-  font: 10px sans-serif;
-  background-color: steelblue;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  color: white;
+.chartDisplayTitle{
+  fill:#354B5F;
+  font-weight: bold;
+  font: 20px sans-serif;
 }

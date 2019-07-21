@@ -1,0 +1,48 @@
+<!-- -scrollama, timeline to be interactive -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title> Sample </title>
+
+
+<script src="https://d3js.org/d3.v4.js"></script>
+<style>
+div.bar{
+
+
+  display:inline-block;
+  width:60px;
+  height:120px;
+  margin-right:2px;
+  background-color:darkmagenta;
+}
+
+
+</style>
+
+</head>
+
+</html>
+
+
+<body>
+  <script>
+    var dataset=[5,25,13,62,44];
+    d3.select("body").selectAll("div")
+    .data(dataset,dataset)
+    .enter()
+    .append("div")
+    .attr("class","bar")
+    .style("height",function(d){
+
+      var barHeight=d*5;
+      return barHeight+"px";
+    });
+
+
+  </script>
+
+
