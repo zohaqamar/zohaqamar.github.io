@@ -38,7 +38,13 @@ div.bar{
 
 
 
-
+SOURCES-CODE, KAGGLE,<BR>
+FIX ROUNDING IN GRAPH<BR>
+OTHER GRAPH<BR>
+EXPLAIN METHOD RLY WELL.<BR>
+EXPLAIN EACH SECTION OF GRAPHS <BR>
+EXPLAIN LIWC<BR>
+MAKE INTERACTIVE<BR>
 
 
 <body style="background-color:#f4f4f4;">
@@ -63,6 +69,31 @@ This project will compare a compilation of ISIS recruitment texts with the Holy 
     <font size="+3">The two datasets</font> on which this project relies contain all the information required for the exploration and analyses presented herein – text excerpts defining the recruitment campaigns, and thus overarching ideals, of ISIS, as well as those of the Qur'an. The following datasets are both sets of scraped texts that capture the fundamental essence of their respective subjects: one is a set of all the religious texts (published in English) cited in English by ISIS in their main English magazines, which circulate around the world in attempt to radicalize a global army of youth.
   </h2>
 
+<h2>ISIS Recruitment Texts
+The main dataset, "Religious Texts Used By ISIS," indeed inspired the mission for this study.\cite{FT:2017}} This compilation includes about 2,685 religious texts cited by ISIS in its premier English magazines, \textit{Rumyah} and \textit{Dabiq}, between the years 2014 and 2017 – a period in which attacks and counter crimes were especially escalating. \textit{Rumiyah} and \textit{Dabiq} are known to especially recruit extremist soldiers from Western nations, which are a rising and concerning part of their reach. Western nations fear them as national security threats, while Muslims in the West fear them as personal security ones – after all, ISIS contingents begin to mar the clear difference between their extremist ideals and the peaceful ones. The \textit{Rumiyah} and \textit{Dabiq} selections contain religious texts, mainly of the Qur'an but also of adjacent Holy messages such as: Hadith, a collection of sayings and traditions recounting the daily habits and practices of the prophet Muhammad which act as Muslim's main supplementary source to the Qur'an; and even some Christian and Jewish holy book excerpts which ISIS believes carry often the intent of their zealous messages. 
+
+The dataset was scraped and compiled by Fifth Tribe, a digital agency based in the Washington, D.C. area. The file was cleaned to include only the textual excerpts necessary for analysis. The original version contained a CSV with the following columns for each entry: 
+
+\textit{- magazine}: Dabiq \textit{or} Rumiyah
+
+\textit{- issue #}
+
+\textit{ - date (Month and Year)}
+
+\textit{- type of Text (Qur'an, Hadith, etc.)}
+
+\textit{- source: What the source of the text was}
+
+\textit{- the quote itself}
+
+\textit{- purpose: Support ISIS, Refute Another Group}
+
+\textit{- the article from which the quote is derived} 
+
+\subsection{The Qur'an Text}
+As the foundation of this project relies on comparison between ISIS materials and Qur'anic text, a dataset of Qur'anic text holds equal importance to that of the baseline ISIS one. Of course, as noted, the original text of the Qur'an is in complicated, old Arabic. Still, an English translation makes sense for comparison both due to the scope and ability of the researcher, as well due to nature of the ISIS magazine material itself being in English. This, again, provides an equal sort of ground for what is offered and exposed to Western Muslims who ISIS is hoping to recruit into its specific embrace. 
+
+The compilation, published by Zeeshan-ul-hassan Usmani onto Kaggle in , has been availed by a notable range of researchers around the world even within the last year since the most recent update and is thus regarded as a trustworthy source for such projects.\cite{Usmani:2018} </h2>
 
 
 <p id="demo"></p>
@@ -71,8 +102,9 @@ This project will compare a compilation of ISIS recruitment texts with the Holy 
 
 <canvas id="barChart"></canvas>
 
-<h2>Topic Frequency, the Qur'an vs. ISIS Texts </h2>
-
+<h2><font size = "+3">Topic Frequency, the Qur'an vs. ISIS Texts</font> <br> <br><font size = "-1"><i>
+shown: the number of verses concerning the noted theme, with respect to the total number of all verses in the respective compilation</i></h2></font>
+<!--
 
 <br><br><br>
 
@@ -90,7 +122,7 @@ This project will compare a compilation of ISIS recruitment texts with the Holy 
     });
 
   </script>
-
+-->
 <style>
 
 /*hides tick marks on bottom xaxis */
@@ -127,14 +159,9 @@ This project will compare a compilation of ISIS recruitment texts with the Holy 
 
 
 
-  <svg class="chart" width="960" height="590" aria-labelledby="graph-title" aria-describedby="graph-desc">
-    <title>GDP Growth Remains Broad Based</title>
-    <desc id="graph-desc">GDP Growth Remains Broad Based, with values for 2017 quarters 1-3.</desc>
-    <text transform="translate(10, 20)" class="chartDisplayTitle">Theme Comparison</text>
+  <svg class="chart" width="800" height="400" aria-labelledby="graph-title" aria-describedby="graph-desc">
 
-    <text transform="translate(10, 70)" class="yUnits">%: number of verses with over number of all verses in respective compilation*</text>
-    <text transform="translate(10, 570)" class="caption">*Contribution to total gross domestic product (GDP) growth; seasonally adjusted annualized rate.</text>
-    <text transform="translate(10, 585)" class="caption">SOURCE: Bureau of Economic Analysis.</text>
+   
   </svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
@@ -152,50 +179,44 @@ https://bl.ocks.org/mbostock/2368837
 
 var econ2 = [
   {
-    "Category": "gold/Allah etc.",
-    "Quran": 1.97,
-    "ISIS Texts": 2.61
+    "Category": "god, Allah & synonyms.",
+    "Quran": 1.97, "ISIS Texts": 2.61
+  },
+  { 
+    "Category": "women & synonyms",
+    "Quran": 1.13, "ISIS Texts": 3.39
   },
   {
-    "Category": "women etc.",
-    "Quran": 1.13,
-    "ISIS Texts": 3.39
+    "Category": "war & synonyms",
+    "Quran": 0.16, "ISIS Texts": 4.92
   },
   {
-    "Category": "war synonyms",
-    "Quran": 0.16,
-    "ISIS Texts": 4.92
-  },
-  {
-    "Category": "sex",
-    "Quran": 0.06,
-    "ISIS Texts": 0.11
+    "Category": "sex & synonyms",
+    "Quran": 0.06, "ISIS Texts": 0.11
 
   },
   {
-    "Category": "heaven synonyms",
-    "Quran": 1.42,
-    "ISIS Texts": 1.79
+    "Category": "heaven & synonyms",
+    "Quran": 1.42, "ISIS Texts": 1.79
 
   },
   {
-    "Category": "hell synonyms",
-    "Quran": 2.54,
-    "ISIS Texts": 0.85
+    "Category": "hell & synonyms",
+    "Quran": 2.54, "ISIS Texts": 0.85
 
   }
 ]
 
 //chart setup
 var svg = d3.select("svg"),
-    margin = {top: 80, right: 10, bottom: 80, left: 25},
+    margin = {top: 20, right: 10, bottom: 50, left: 25},
     width = svg.attr("width") - margin.left - margin.right,
     height = svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 //y position calculation function
 var y = d3.scaleLinear()
-      .domain([-2, 4])
+      .domain([0, 6])
       .range([height, 0]);
 
 var x0 = d3.scaleBand()  // domain defined below
@@ -242,15 +263,24 @@ x1.domain(subCategories).rangeRound([0, x0.bandwidth()])
       .attr("width", x1.bandwidth())
       .attr("height", d => Math.abs(y(d.value) - y(0)) )
       .attr("fill", d => z(d.key) )
+      .on("mouseover", function() {
+  d3.select(this).select('rect').style('fill', 'red');
+})
+.on("mouseout", function(d, i) {
+  d3.select(this).select('rect').style('fill', 'blue');
+})
+
+
     //can not nest the text element inside the rect element !
     selection.selectAll("text")
        .data(function(d) { return subCategories.map(function(key) { return {key: key, value: d[key]}; }); })
         .enter().append("text")
         .attr("x", d => x1(d.key) )
+        .attr("font-family", "Gill Sans")
     //offset the position of the y value (positive / negative) to have the text over/under the rect bar
         .attr("y", d => d.value<=0 ? y(0) - (y(4) - (Math.abs(y(d.value) - y(0)) + 20)) : y(d.value) - 10)
         .style('fill', d => z(d.key))
-        .style('font-size', '1.25em')
+        .style('font-size', '10px')
     //make sure one just decimal place is displayed
         .text(d => Number.parseFloat(d.value).toFixed(1))
 
@@ -261,11 +291,14 @@ g.append("g")
     .call(d3.axisBottom(x0))
     .selectAll(".tick text")
     //use wrap function to wrap long lines in labels
-    .call(wrap, x0.bandwidth());
+    .call(wrap, x0.bandwidth())
+    .attr("font-family", "Gill Sans");
+
 
 //add the y-axis - notice it does not have css class 'axis'
 g.append('g')
 .call(yAxis)
+.attr("font-family", "Gill Sans");
 
 //idenitfy zero line on the y axis.
 g.append("line")
@@ -273,10 +306,11 @@ g.append("line")
     .attr("y2", y(0))
     .attr("x1", 0)
     .attr("x2", width)
-    .attr("stroke", "black");
+    .attr("stroke", "black")
+    .attr("font-family", "Gill Sans");
 
 var legend = g.append("g")
-      .attr("font-family", "sans-serif")
+      .attr("font-family", "Gill Sans")
       .attr("font-size", 13)
       .attr("text-anchor", "end")
     .selectAll("g")
@@ -284,15 +318,18 @@ var legend = g.append("g")
     .enter().append("g")
       .attr("transform", function(d, i) { return "translate(0," + i * 24 + ")"; });
   legend.append("rect")
-      .attr("x", width - 142)
+      .attr("x", width - 60)
       .attr("width", 8)
       .attr("height", 8)
       .attr("fill", z);
   legend.append("text")
-          .attr("x", d => d.length > 7 ? (width + 5) : (width - 80))
+          .attr("font-family", "Gill Sans")
+          .attr("x", d => d.length > 5 ? (width + 5) : (width - 10))
           .attr("y", 5.5)
           .attr("dy", "0.22em")
           .text(d => (d));
+
+
 
 //https://bl.ocks.org/mbostock/7555321 - wrap long labels
   function wrap(text, width) {
@@ -320,9 +357,57 @@ var legend = g.append("g")
           }
 
 
+
+
 </script>
 
 
+
+<h2><font size = "-1">NOTE: <br>SOURCES: Kaggle etc </font></h2>
+
+<br><br><br><br><br>
+
+  <svg height="10" width=100%>
+
+<line x1="0" y1="7" x2="250" y2="7" stroke="grey" style="stroke-width:.3"/>
+
+</svg>
+
+</script>
+
+
+
+<h2><font size = "+1">ACKNOWLEDGEMENTS </font><br><br>– LIWC<br><br>– Levine<r><br><br>– DATA</i><br><br>
+
+  <svg height="10" width=100%>
+
+<line x1="0" y1="7" x2="250" y2="7" stroke="grey" style="stroke-width:.3"/>
+
+</svg>
+<h2><font size = "+1">SOURCES</font><br><br>Alfred V. Aho and Jeffrey D. Ullman. 1972. <i>The Theory of Parsing, Translation and Compiling</i>, volume 1. Prentice-Hall, Englewood Cliffs, NJ.<br><br>
+
+American Psychological Association. 1983. <i>Publications Manual.</i> American Psychological Association, Washington, DC.<br><br>
+
+Rie Kubota Ando and Tong Zhang. 2005. A framework for learning predictive structures from multiple tasks and unlabeled data. <i>Journal of Machine Learning Research</i>, 6:1817–1853. <br><br>
+
+Galen Andrew and Jianfeng Gao. 2007. Scalable training of L1-regularized log-linear models. In <i>Proceedings of the 24th International Conference on Machine Learning</i>, pages 33–40.  <br><br>
+
+Benjamin Borschinger and Mark Johnson. 2011. A particle filter algorithm for Bayesian wordsegmentation. In <i>Proceedings of the Australasian Language Technology Association Workshop 2011</i>, pages 10– 18, Canberra, Australia.  <br><br>
+
+Ashok K. Chandra, Dexter C. Kozen, and Larry J. Stockmeyer. 1981. Alternation. <i>Journal of the Association for Computing Machinery</i>, 28(1):114–133.  <br><br>
+
+Association for Computing Machinery. 1983. <i>Computing Reviews</i>, 24(11):503–512.  <br><br>
+
+James Goodman, Andreas Vlachos, and Jason Naradowsky. 2016. Noise reduction and targeted exploration in imitation learning for abstract meaning representation parsing. In <i>Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</i>, pages 1–11. Association for Computational Linguistics.  <br><br>
+
+Dan Gusfield. 1997. <i>Algorithms on Strings, Trees and Sequences</i>. Cambridge University Press, Cambridge, UK.  <br><br>
+
+Mary Harper. 2014. Learning from 26 languages: Program management and science in the babel program. In <i>Proceedings of COLING 2014, the 25th International Conference on Computational Linguistics: Technical Papers</i>, page 1. Dublin City University and Association for Computational Linguistics. 
+
+Mohammad Sadegh Rasooli and Joel R. Tetreault. 2015. Yara parser: A fast and accurate dependency parser. <i>Computing Research Repository</i>, arXiv:1503.06733. Version 2. A Appendices Appendices are material that can be read, and include lemmas, formulas, <br><br>
+
+
+</h2>
 </body>
 
 
