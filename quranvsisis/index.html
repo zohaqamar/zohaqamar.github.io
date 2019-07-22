@@ -431,6 +431,16 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
     .call(d3.axisLeft(y));
   svg.append
 
+svg.append("line")
+ .attr("x1", 461)
+ .attr("y1", 0)
+ .attr("x2", 0)
+ .attr("y2", 461)
+ .attr("stroke", "blue")
+ .attr("stroke-width", .2);
+
+
+
   // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
   // Its opacity is set to 0: we don't see it by default.
   var tooltip = d3.select("#my_dataviz")
@@ -467,15 +477,10 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
       .style("opacity", 0)
   }
 
-  svg.append("line")
- .attr("x1", 461)
- .attr("y1", 0)
- .attr("x2", 0)
- .attr("y2", 461)
- .attr("stroke", "blue")
- .attr("stroke-width", .2);
+  
+// Add dots
+ 
 }
-
 
 
 )
