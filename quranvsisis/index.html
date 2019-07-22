@@ -465,14 +465,6 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
       .style("font-family","Gill Sans")
   }
 
-
-svg.append("line")
- .attr("x1", 461)
- .attr("y1", 0)
- .attr("x2", 0)
- .attr("y2", 461)
- .attr("stroke", "blue")
- .attr("stroke-width", .2);
   // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
   var mouseleave = function(d) {
     tooltip
@@ -481,6 +473,14 @@ svg.append("line")
       .style("opacity", 0)
   }
 
+
+svg.append("line")
+ .attr("x1", 461)
+ .attr("y1", 0)
+ .attr("x2", 0)
+ .attr("y2", 461)
+ .attr("stroke", "yellow")
+ .attr("stroke-width", .2);
   
 // Add dots
   svg.append('g')
