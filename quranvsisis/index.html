@@ -467,23 +467,13 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
       .style("opacity", 0)
   }
 
-  // Add dots
-  svg.append('g')
-    .selectAll("dot")
-    .data(data.filter(function(d,i){return i<50})) // the .filter part is just to keep a few dots on the chart, not all of them
-    .enter()
-    .append("circle")
-      .attr("cx", function (d) { return x(d.Quran); } )
-      .attr("cy", function (d) { return y(d.ISIS); } )
-      .attr("r", 4)
-      .style("fill", "#f28907")
-      .style("opacity", 0.5)
-      .style("stroke", "white")
-    .on("mouseover", mouseover )
-    .on("mousemove", mousemove )
-    .on("mouseleave", mouseleave )
-
-
+  svg.append("line")
+ .attr("x1", 461)
+ .attr("y1", 0)
+ .attr("x2", 0)
+ .attr("y2", 461)
+ .attr("stroke", "blue")
+ .attr("stroke-width", .2);
 }
 
 
