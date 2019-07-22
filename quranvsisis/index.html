@@ -465,7 +465,7 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
     tooltip
       .html("This dot maps Quran vs. ISIS usage of " + d.attribute)
       .style("left", (d3.mouse(this)[0]+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-      .style("top", (d3.mouse(this)[1]) + "px")
+      .style("top", (d3.mouse(this)[1])+90 + "px")
       .style("font-family","Gill Sans")
   }
 
@@ -485,23 +485,23 @@ svg.append("line")
  .attr("y1", 0)
  .attr("x2", 0)
  .attr("y2", 461)
- .attr("stroke", "yellow")
+ .attr("stroke", "blue")
  .attr("stroke-width", .2)
   
   
 
 
-// Add dots
-  svg.append('g')
+
+    svg.append('g')
     .selectAll("dot")
     .data(data.filter(function(d,i){return i<50})) // the .filter part is just to keep a few dots on the chart, not all of them
     .enter()
     .append("circle")
       .attr("cx", function (d) { return x(d.Quran); } )
       .attr("cy", function (d) { return y(d.ISIS); } )
-      .attr("r", 5)
-      .style("fill", "#f28907")
-      .style("opacity", 0.5)
+      .attr("r", 7)
+      .style("fill", "#69b3a2")
+      .style("opacity", 0.3)
       .style("stroke", "white")
     .on("mouseover", mouseover )
     .on("mousemove", mousemove )
