@@ -25,11 +25,11 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(data) {
+d3.csv("http://zohaqamar.github.io/quranvsisis/take2.csv", function(data) {
 
   // Add X axis
   var x = d3.scaleLinear()
-    .domain([0, 30])
+    .domain([0, 3000])
     .range([ 0, width ]);
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -37,7 +37,7 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, 30])
+    .domain([0, 400000])
     .range([ height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
