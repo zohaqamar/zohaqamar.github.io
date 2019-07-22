@@ -1,9 +1,9 @@
 attribute,Quran,ISIS
-Authenticity,9.56,2.81 
-'we' pronoun,1.93,0.69 
-'you' pronoun,4.04,1.43 
-'i' pronoun,6.76,4.9 
-verb,15.88,11.6 
+authenticity,9.56,2.81 
+'we' pronouns,1.93,0.69 
+'you' pronouns,4.04,1.43 
+'i' pronouns,6.76,4.9 
+verbs,15.88,11.6 
 positive emotion,3.39,2.43 
 anger,0.82,1.09 
 insight,2.48,1.53 
