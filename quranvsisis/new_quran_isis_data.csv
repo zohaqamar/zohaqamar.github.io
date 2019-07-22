@@ -1,21 +1,21 @@
 attribute,Quran,ISIS
-authenticity,9.56,2.81 
-'we' pronouns,1.93,0.69 
-'you' pronouns,4.04,1.43 
-'i' pronouns,6.76,4.9 
-verbs,15.88,11.6 
-positive emotion,3.39,2.43 
-anger,0.82,1.09 
-insight,2.48,1.53 
-motivation,8.1,5.85 
-friendship/allyship,2.77,1.5 
-achievement,1.21,1.05 
-power,3.31,2.91 
-focus on the past,3.54,3.36 
-focus on the present,9.95,6.41 
-focus on the future,2.5,1.72 
-time,3.15,2.63 
-work,0.78,1.41 
-leisure,0.35,0.24 
-religion,4.44,4.28 
+authenticity,9.56,2.81
+we_pronouns,1.93,0.69
+you_pronouns,4.04,1.43
+i_pronouns,6.76,4.9
+verbs,15.88,11.6
+positive_emotion,3.39,2.43
+anger,0.82,1.09
+insight,2.48,1.53
+motivation,8.1,5.85
+friendship/allyship,2.77,1.5
+achievement,1.21,1.05
+power,3.31,2.91
+focus_on_the_past,3.54,3.36
+focus_on_the_present,9.95,6.41
+focus_on_the_future,2.5,1.72
+time,3.15,2.63
+work,0.78,1.41
+leisure,0.35,0.24
+religion,4.44,4.28
 death,0.3,0.52
