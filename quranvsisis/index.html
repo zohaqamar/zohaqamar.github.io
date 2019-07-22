@@ -1,5 +1,5 @@
 <!-- -scrollama, timeline to be interactive 
-
+FIX BOTTOM GRAPG
 SOURCES-CODE, KAGGLE,<BR>
 FIX ROUNDING IN GRAPH<BR>
 OTHER GRAPH<BR>
@@ -465,8 +465,8 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
     tooltip
       .html("This dot maps Quran vs. ISIS usage of " + d.attribute)
       .style("left", (d3.mouse(this)[0]+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-      .style("top", (d3.mouse(this)[1])+90 + "px")
-      .style("font-family","Gill Sans")
+      .style("top", (d3.mouse(this)[1]) + "px")
+      
   }
 
   // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
@@ -478,21 +478,7 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
   }
 
 
-
-
-svg.append("line")
- .attr("x1", 461)
- .attr("y1", 0)
- .attr("x2", 0)
- .attr("y2", 461)
- .attr("stroke", "blue")
- .attr("stroke-width", .2)
-  
-  
-
-
-
-    svg.append('g')
+svg.append('g')
     .selectAll("dot")
     .data(data.filter(function(d,i){return i<50})) // the .filter part is just to keep a few dots on the chart, not all of them
     .enter()
@@ -507,11 +493,10 @@ svg.append("line")
     .on("mousemove", mousemove )
     .on("mouseleave", mouseleave )
 
-}
-
-
-)
+})
 </script> 
+
+
 <br><br>
 <h2>
     These scores have been evaluated through Linguistic Inquiry and Word Count (aka LIWC), a popular sentiment analysis program that initially inspired the course of this project. It assesses precurated themes and assigns them a frequency score. We charted the absolute score of the Qur'an vs ISIS texts for some of the attributes, in order to create a relative comparison of frequency proportion. Those closer to the blue line represent themes about evenly mentioned by the two. Those below are more mentioned in the Qur'an; those above, in the ISIS texts.
