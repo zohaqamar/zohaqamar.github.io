@@ -400,7 +400,7 @@ On the flip side, accentuating themes and descriptions related to heaven offers 
 
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 20, bottom: 20, left: 25},
-    width =500 - margin.left - margin.right,
+    width = 500 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
@@ -413,7 +413,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("http://zohaqamar.github.io/quranvsisis/new_quran_isis_data.csv", function(data) {
+d3.csv("https://zohaqamar.github.io/quranvsisis/new_quran_isis_data.csv", function(data) {
 
   // Add X axis
   var x = d3.scaleLinear()
@@ -429,11 +429,6 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/new_quran_isis_data.csv", functio
     .range([ height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
-  svg.append
-
-
-
-
 
   // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
   // Its opacity is set to 0: we don't see it by default.
@@ -441,21 +436,16 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/new_quran_isis_data.csv", functio
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")
-
-    .style("padding", "5px")
-
-
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
 
 
 
   // A function that change this tooltip when the user hover a point.
   // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
- 
-  
-
- 
-
-
   var mouseover = function(d) {
     tooltip
       .style("opacity", 1)
@@ -463,10 +453,10 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/new_quran_isis_data.csv", functio
 
   var mousemove = function(d) {
     tooltip
-      .html("This dot maps Quran vs. ISIS usage of " + d.attribute)
+      .html("The exact value of<br>the Ground Living area is: " + d.attribute)
       .style("left", (d3.mouse(this)[0]+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
       .style("top", (d3.mouse(this)[1]) + "px")
-      
+      .style("font-family","Gill Sans")
   }
 
   // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
@@ -477,16 +467,8 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/new_quran_isis_data.csv", functio
       .style("opacity", 0)
   }
 
-svg.append("line")
- .attr("x1", 461)
- .attr("y1", 0)
- .attr("x2", 0)
- .attr("y2", 461)
- .attr("stroke", "red")
- .attr("stroke-width", .2)
-
-
-svg.append('g')
+  // Add dots
+  svg.append('g')
     .selectAll("dot")
     .data(data.filter(function(d,i){return i<50})) // the .filter part is just to keep a few dots on the chart, not all of them
     .enter()
@@ -502,7 +484,16 @@ svg.append('g')
     .on("mouseleave", mouseleave )
 
 })
-</script> 
+
+svg.append("line")
+ .attr("x1", 461)
+ .attr("y1", 0)
+ .attr("x2", 0)
+ .attr("y2", 461)
+ .attr("stroke", "red")
+ .attr("stroke-width", .2)
+
+</script>
 
 
 <br><br>
