@@ -1,64 +1,21 @@
-<!-- -scrollama, timeline to be interactive 
-FIX BOTTOM GRAPG
-SOURCES-CODE, KAGGLE,<BR>
-FIX ROUNDING IN GRAPH<BR>
-OTHER GRAPH<BR>
-EXPLAIN METHOD RLY WELL.<BR>
-EXPLAIN EACH SECTION OF GRAPHS <BR>
-EXPLAIN LIWC<BR>
-MAKE INTERACTIVE<BR>
-HOVER<BR>
-
--->
-
+<!-- Code from d3-graph-gallery.com -->
 <!DOCTYPE html>
-<html lang="en">
+<meta charset="utf-8">
 
-<head style="background-color:#f4f4f4;">
-	<meta charset="utf-8">
-
-
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="format.css">
-
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
-<style>
-div.bar{
 
-
-  display:inline-block;
-  width:20px;
-  height:120px;
-  margin-right:2px;
-  background-color:darkmagenta;
-}
-
-
-</style>
-	
-	<h1>The Feminist "Trend"</h1><br>
-
-<!-- Add a bit of text -->
-	<h1>
-		<i><font size="-2">A Look at Google Search Popularity| by Zoha Qamar, 2019 </i></font><br><br>
-	</h1><br><br>
-</head>
-
-<br><br>
-
-<body style="background-color:#f4f4f4;">
+<!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
+
+<!-- Circle are black when hovered-->
 <style>
 .myCircle:hover {
   stroke: black;
 }
 </style>
+
+
 <script>
 
 // set the dimensions and margins of the graph
@@ -74,9 +31,8 @@ var svg = d3.select("#my_dataviz")
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
-
 //Read the data
-d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
+d3.csv("http://zohaqamar.github.io/google_data_min.csv",
 
   // When reading the csv, I must format variables:
   function(d){
@@ -110,8 +66,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
         .x(function(d) { return x(d.Month) })
-        .y(function(d) { return y(d.feminismW
-          ) })
+        .y(function(d) { return y(d.feminismW) })
         )
 
     // create a tooltip
@@ -132,7 +87,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
       }
       var mousemove = function(d) {
         Tooltip
-          .html("Exact value: " + d.value)
+          .html("Exact value: " + d.Month+ " "+ d.feminismW)
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
@@ -152,7 +107,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         .attr("cx", function(d) { return x(d.Month) } )
         .attr("cy", function(d) { return y(d.feminismW) } )
         .attr("r", 8)
-        .attr("stroke", "#560c78")
+        .attr("stroke", "#69b3a2")
         .attr("stroke-width", 3)
         .attr("fill", "white")
         .on("mouseover", mouseover)
