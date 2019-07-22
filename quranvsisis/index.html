@@ -393,8 +393,6 @@ On the flip side, accentuating themes and descriptions related to heaven offers 
 
 <h2><font size = "+3"><br>Other attributes</font></h2>
 <h2><br>Other attributes of sentiment analysis </h2>
-
-Create a div where the graph will take place 
 <div id="my_dataviz"></div>
 
 
@@ -479,9 +477,9 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
     .append("circle")
       .attr("cx", function (d) { return x(d.Quran); } )
       .attr("cy", function (d) { return y(d.ISIS); } )
-      .attr("r", 3)
+      .attr("r", 4)
       .style("fill", "#f28907")
-      .style("opacity", 0.3)
+      .style("opacity", 0.5)
       .style("stroke", "white")
     .on("mouseover", mouseover )
     .on("mousemove", mousemove )
