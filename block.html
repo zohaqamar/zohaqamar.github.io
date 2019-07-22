@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://bl.ocks.org/d3noob/raw/0e276dc70bb9184727ee47d6dd06e915/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style> /* set the CSS */
+
+.axis { font: 14px sans-serif; }
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+</style>
+</head><body>
+
+<!-- load the d3.js library -->    	
+<script src="https://d3js.org/d3.v4.js"></script>
+<script>
+
+// set the dimensions and margins of the graph
+var margin = {top: 20, right: 20, bottom: 100, left: 50},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+// parse the date / time
+var parseTime = d3.timeParse("%d-%b-%y");
+
+// set the ranges
+var x = d3.scaleTime().range([0, width]);
+var y = d3.scaleLinear().range([height, 0]);
+
+// define the line
+var valueline = d3.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.close); });
+
+// append the svg obgect to the body of the page
+// appends a 'group' element to 'svg'
+// moves the 'group' element to the top left margin
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// Get the data
+d3.csv("file:///Users/209461/Desktop/NYT_decks/site/zohaqamar.github.io/google_data.csv", function(error, data) {
+  if (error) throw error;
+
+  // format the data
+  data.forEach(function(d) {
+      d.date = parseTime(d.date);
+      d.close = +d.close;
+  });
+
+  // Scale the range of the data
+  x.domain(d3.extent(data, function(d) { return d.Month; }));
+  y.domain([0, d3.max(data, function(d) { return d.feminismUS; })]);
+
+  // Add the valueline path.
+  svg.append("path")
+      .data([data])
+      .attr("class", "line")
+      .attr("d", valueline);
+
+  // Add the X Axis
+  svg.append("g")
+      .attr("class", "axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x)
+              .tickFormat(d3.timeFormat("%Y-%m")))
+      .selectAll("text")	
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", "rotate(-65)");
+
+  // Add the Y Axis
+  svg.append("g")
+      .attr("class", "axis")
+      .call(d3.axisLeft(y));
+
+});
+
+</script><svg width="960" height="500"><g transform="translate(50,20)"><path class="line" d="M890,345.28079468116874L865.2777777777777,347.7594580576207L791.1111111111111,339.98302500667995L766.3888888888889,326.42503497162977L741.6666666666667,320.87043993524355L716.9444444444445,302.1878880279144L692.2222222222223,280.4353771434859L618.0555555555555,239.65389874730838L593.3333333333333,173.67964415384375L568.6111111111111,115.20707920091792L543.8888888888889,55.2652342706254L519.1666666666667,33.506750703362L445,18.515316787954077L420.27777777777777,8.03923109567296L395.55555555555554,5.990600883328341L370.83333333333337,4.65271992832777L346.11111111111114,0L247.22222222222223,1.5230341228801194L222.5,7.119437939110128L197.77777777777777,4.12712383886327L173.05555555555557,10.511921789290056L98.88888888888889,21.907800638134063L74.16666666666666,15.749964635430558L49.44444444444444,11.115162755607287L24.72222222222222,12.990585165741948L0,17.470097291859872"></path><g class="axis" transform="translate(0,380)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><path class="domain" stroke="#000" d="M0.5,6V0.5H890.5V6"></path><g class="tick" opacity="1" transform="translate(25.22222222222222,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-03-27</text></g><g class="tick" opacity="1" transform="translate(74.66666666666666,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-03-29</text></g><g class="tick" opacity="1" transform="translate(124.11111111111111,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-03-31</text></g><g class="tick" opacity="1" transform="translate(148.83333333333331,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-01</text></g><g class="tick" opacity="1" transform="translate(198.27777777777777,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-03</text></g><g class="tick" opacity="1" transform="translate(247.72222222222223,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-05</text></g><g class="tick" opacity="1" transform="translate(297.16666666666663,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-07</text></g><g class="tick" opacity="1" transform="translate(346.61111111111114,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-09</text></g><g class="tick" opacity="1" transform="translate(396.05555555555554,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-11</text></g><g class="tick" opacity="1" transform="translate(445.5,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-13</text></g><g class="tick" opacity="1" transform="translate(494.94444444444446,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-15</text></g><g class="tick" opacity="1" transform="translate(544.3888888888889,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-17</text></g><g class="tick" opacity="1" transform="translate(593.8333333333333,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-19</text></g><g class="tick" opacity="1" transform="translate(643.2777777777777,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-21</text></g><g class="tick" opacity="1" transform="translate(692.7222222222223,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-23</text></g><g class="tick" opacity="1" transform="translate(742.1666666666667,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-25</text></g><g class="tick" opacity="1" transform="translate(791.6111111111111,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-27</text></g><g class="tick" opacity="1" transform="translate(841.0555555555555,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-04-29</text></g><g class="tick" opacity="1" transform="translate(890.5,0)"><line stroke="#000" y2="6"></line><text fill="#000" y="9" dy=".15em" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">2012-05-01</text></g></g><g class="axis" fill="none" font-size="10" font-family="sans-serif" text-anchor="end"><path class="domain" stroke="#000" d="M-6,380.5H0.5V0.5H-6"></path><g class="tick" opacity="1" transform="translate(0,380.5)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">0</text></g><g class="tick" opacity="1" transform="translate(0,350.63658582588056)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">50</text></g><g class="tick" opacity="1" transform="translate(0,320.7731716517612)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">100</text></g><g class="tick" opacity="1" transform="translate(0,290.90975747764173)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">150</text></g><g class="tick" opacity="1" transform="translate(0,261.0463433035223)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">200</text></g><g class="tick" opacity="1" transform="translate(0,231.1829291294029)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">250</text></g><g class="tick" opacity="1" transform="translate(0,201.31951495528347)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">300</text></g><g class="tick" opacity="1" transform="translate(0,171.45610078116405)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">350</text></g><g class="tick" opacity="1" transform="translate(0,141.5926866070446)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">400</text></g><g class="tick" opacity="1" transform="translate(0,111.7292724329252)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">450</text></g><g class="tick" opacity="1" transform="translate(0,81.86585825880582)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">500</text></g><g class="tick" opacity="1" transform="translate(0,52.002444084686374)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">550</text></g><g class="tick" opacity="1" transform="translate(0,22.139029910566933)"><line stroke="#000" x2="-6"></line><text fill="#000" x="-9" dy="0.32em">600</text></g></g></g></svg>
+
+</body></html>
