@@ -16,11 +16,14 @@ MAKE INTERACTIVE<BR>
 <head style="background-color:#f4f4f4;">
 	<meta charset="utf-8">
 
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="bootstrap.css">
   <link rel="stylesheet" type="text/css" href="format.css">
 
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v4.js"></script>
@@ -127,12 +130,12 @@ A percent of verses mentioning such topics, in regards to the total number of ve
 
 
 
-
   <svg class="chart" width="800" height="400" aria-labelledby="graph-title" aria-describedby="graph-desc">
 
    
   </svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
+
 <script>
 
 /*
@@ -199,7 +202,7 @@ var x1 = d3.scaleBand()  // domain and range defined below
 
 //blue, tan, red colors
 var z = d3.scaleOrdinal()
-        .range(["#BC151E", "#D3B178", "#354B5F"]);
+        .range(["#0d856d", "#25054d "]);
 
 //reference to the y axis
 //axisLeft put labels on left side
@@ -378,7 +381,7 @@ On the flip side, accentuating themes and descriptions related to heaven offers 
 
 
 </h2>
-<!--
+
   <svg height="10" width=100%>
 
 <line x1="0" y1="7" x2="250" y2="7" stroke="grey" style="stroke-width:.3"/>
@@ -399,8 +402,8 @@ Create a div where the graph will take place
 
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 20, bottom: 20, left: 25},
-    width = 460 - margin.left - margin.right,
-    height = 460 - margin.top - margin.bottom;
+    width =500 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -416,7 +419,7 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
 
   // Add X axis
   var x = d3.scaleLinear()
-    .domain([0, 5])
+    .domain([0, 10])
     .range([ 0, width ]);
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -424,7 +427,7 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, 5])
+    .domain([0, 10])
     .range([ height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
@@ -441,6 +444,8 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
     .style("border-width", "1px")
     .style("border-radius", "5px")
     .style("padding", "10px")
+
+
 
 
 
@@ -474,17 +479,32 @@ d3.csv("http://zohaqamar.github.io/quranvsisis/quran_isis_data.csv", function(da
     .append("circle")
       .attr("cx", function (d) { return x(d.Quran); } )
       .attr("cy", function (d) { return y(d.ISIS); } )
-      .attr("r", 7)
-      .style("fill", "#69b3a2")
+      .attr("r", 3)
+      .style("fill", "#f28907")
       .style("opacity", 0.3)
       .style("stroke", "white")
     .on("mouseover", mouseover )
     .on("mousemove", mousemove )
     .on("mouseleave", mouseleave )
 
-})
+svg.append("line")
+ .attr("x1", 461)
+ .attr("y1", 0)
+ .attr("x2", 0)
+ .attr("y2", 461)
+ .attr("stroke", "blue")
+ .attr("stroke-width", .2);
 
-</script> -->
+
+
+}
+
+
+
+)
+
+
+</script> 
 <br><br><br><br><br><br><br><br>
   <svg height="10" width=100%>
 
