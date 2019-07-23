@@ -14,7 +14,9 @@ HOVER<BR>
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head style="background-color:#f4f4f4;">
+
 	<meta charset="utf-8">
 
 
@@ -41,20 +43,57 @@ div.bar{
 
 
 </style>
+
+
 	
-	<h1>The Feminist "Trend"</h1><br>
+	<h1><br><br><br><br><br><br><br>The Feminist "Trend"</h1><br>
 
 <!-- Add a bit of text -->
 	<h1>
-		<i><font size="-2">A Look at Google Search Popularity | by Zoha Qamar, 2019 </i></font><br><br>
+<font size="-1">A Look at Google Search Popularity</font><br><br>
 	</h1><br><br>
+
+
+  <style> 
+
+
+@keyframes fadeInAnimation { 
+  0% { 
+    opacity: 0; 
+  } 
+  100% { 
+    opacity: 1; 
+  } 
+} 
+
+    body { 
+      animation: fadeInAnimation ease 3s; 
+      animation-iteration-count: 1; 
+      animation-fill-mode: forwards; 
+    } 
+    @keyframes fadeInAnimation { 
+      0% { 
+        opacity: 0; 
+      } 
+      100% { 
+        opacity: 1; 
+      } 
+    } 
+  </style> 
 </head>
 
 
-<body style="background-color:#f4f4f4;">
+<body style="background-color:#ffffff;">
 
 
-<h2>INSERT WORDSSSSS EXPLAIN THE PROJECT....<br><br>MAIN THINGS TO FIX <br>1. insert intro (impt! social change! how internet faciliates info/knowledge/awarenes etc), explain each graph, (search data has is random / normalized. make sure 2 mention that!) conclusion <br>2. clean up tooltip feature <br>3. what does each "score" actually means<br><br></h2>
+<h2>INSERT WORDSSSSS EXPLAIN THE PROJECT....<br><br>MAIN THINGS TO FIX 
+  f<br>1. insert intro (impt! social change! how internet faciliates info/knowledge/awarenes etc), explain each graph, (search data has is random / normalized. make sure 2 mention that!) conclusion 
+  <br>2. clean up tooltip feature 
+  <br>3. what does each "score" actually means
+  <br>4. hover
+  <br>5.map to real world events
+  <br>6. highlight certain dots
+  <br>7. email tonia asap 8 am<br><br></h2>
 
 <h2><font size = "+2"><i>"feminism"</i> – </font>
 <font size ="+1"><font color ="#8803fc">World</font> and <font color ="#f0868c">U.S.</font></font></h2>
@@ -115,6 +154,8 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
   function(d){
     return { Month : d3.timeParse("%Y-%m-%d")(d.Month), feminismW : d.feminismW, feminismUS : d.feminismUS }
   },
+
+
 
   // Now I can use this dataset:
   function(data) {
@@ -190,8 +231,6 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         .on("mouseover", mouseover)
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave)
-
-
 
 
 
@@ -966,5 +1005,5 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
 
 </script>
 
-
+<h4><i>Zoha Qamar, 2019</i></h4>
 </body>
