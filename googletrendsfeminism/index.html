@@ -55,8 +55,23 @@ div.bar{
 
 <h2><font size = "+2"><i>"feminism"</i></font></h2>
 <br><br>
-<div id="my_dataviz"></div>
-<div id="my_dataviz_here"></div>
+<div id="my_dataviz1"></div><br><br><br><br>
+
+<h2><font size = "+2"><i>"sexual assault"</i></font></h2>
+<br><br>
+<div id="my_dataviz2"></div><br><br><br><br>
+
+<h2><font size = "+2"><i>"women's rights"</i></font></h2>
+<br><br>
+<div id="my_dataviz3"></div><br><br><br><br>
+
+<h2><font size = "+2"><i>"international women's day"</i></font></h2>
+<br><br>
+<div id="my_dataviz4"></div><br><br><br><br>
+
+<h2><font size = "+2"><i>"intersectionality"</i></font></h2>
+<br><br>
+<div id="my_dataviz5"></div><br><br><br><br>
 
 
 <style>
@@ -72,7 +87,7 @@ var margin = {top: 10, right: 30, bottom: 30, left: 60},
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg1 = d3.select("#my_dataviz")
+var svg1 = d3.select("#my_dataviz1")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -114,8 +129,8 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
     svg1.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", 1.5)
+      .attr("stroke", "#23045c")
+      .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
         .x(function(d) { return x(d.Month) })
@@ -124,14 +139,14 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz")
+    var Tooltip = d3.select("#my_dataviz1")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
       .style("background-color", "white")
       .style("border", "solid")
-      .style("border-width", "2px")
-      .style("border-radius", "5px")
+      .style("border-width", ".5px")
+      .style("border-radius", "1px")
       .style("padding", "5px")
 
       // Three function that change the tooltip when user hover / move / leave a cell
@@ -177,8 +192,8 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
     svg1.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", 1.5)
+      .attr("stroke", "#f0868c")
+      .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
         .x(function(d) { return x(d.Month) })
@@ -187,14 +202,14 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz")
+    var Tooltip = d3.select("#my_dataviz1")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
       .style("background-color", "white")
       .style("border", "solid")
-      .style("border-width", "2px")
-      .style("border-radius", "5px")
+      .style("border-width", ".5px")
+      .style("border-radius", "2px")
       .style("padding", "5px")
 
 
@@ -241,7 +256,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
 
 </script>
 
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <script>
 
 // set the dimensions and margins of the graph
@@ -250,7 +265,7 @@ var margin = {top: 10, right: 30, bottom: 30, left: 60},
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg2 = d3.select("#my_dataviz")
+var svg2 = d3.select("#my_dataviz2")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -292,8 +307,8 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
     svg2.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", 1.5)
+      .attr("stroke", "#23045c")
+      .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
         .x(function(d) { return x(d.Month) })
@@ -302,7 +317,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz")
+    var Tooltip = d3.select("#my_dataviz2")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
@@ -355,8 +370,8 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
     svg2.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", 1.5)
+      .attr("stroke", "#f0868c")
+      .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
         .x(function(d) { return x(d.Month) })
@@ -365,7 +380,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz")
+    var Tooltip = d3.select("#my_dataviz2")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
@@ -425,7 +440,7 @@ var margin = {top: 10, right: 30, bottom: 30, left: 60},
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg3 = d3.select("#my_dataviz")
+var svg3 = d3.select("#my_dataviz3")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -467,8 +482,8 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
     svg3.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", 1.5)
+      .attr("stroke", "#23045c")
+      .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
         .x(function(d) { return x(d.Month) })
@@ -477,7 +492,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz")
+    var Tooltip = d3.select("#my_dataviz3")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
@@ -530,8 +545,8 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
     svg3.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", 1.5)
+      .attr("stroke", "#f0868c")
+      .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
         .x(function(d) { return x(d.Month) })
@@ -540,7 +555,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz")
+    var Tooltip = d3.select("#my_dataviz3")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
@@ -606,7 +621,7 @@ var margin = {top: 10, right: 30, bottom: 30, left: 60},
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg4 = d3.select("#my_dataviz")
+var svg4 = d3.select("#my_dataviz4")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -614,14 +629,12 @@ var svg4 = d3.select("#my_dataviz")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-
-
 //Read the data
 d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
 
   // When reading the csv, I must format variables:
   function(d){
-    return { Month : d3.timeParse("%Y-%m-%d")(d.Month), intersectionalityW : d.intersectionalityW, international_womens_dayUS : d.international_womens_dayUS }
+    return { Month : d3.timeParse("%Y-%m-%d")(d.Month), international_womens_dayW : d.international_womens_dayW, international_womens_dayUS : d.international_womens_dayUS }
   },
 
   // Now I can use this dataset:
@@ -648,17 +661,17 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
      svg4.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", 1.5)
+      .attr("stroke", "#23045c")
+      .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
         .x(function(d) { return x(d.Month) })
-        .y(function(d) { return y(d.intersectionalityW
+        .y(function(d) { return y(d.international_womens_dayW
           ) })
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz")
+    var Tooltip = d3.select("#my_dataviz4")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
@@ -675,7 +688,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
       }
       var mousemove = function(d) {
         Tooltip
-         .html("search popularity in " + d3.timeFormat("%B %Y")(d.Month)+ " was "+ d.intersectionalityW +"%")
+         .html("search popularity in " + d3.timeFormat("%B %Y")(d.Month)+ " was "+ d.international_womens_dayW +"%")
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
@@ -693,7 +706,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
       .append("circle")
         .attr("class", "myCircle")
         .attr("cx", function(d) { return x(d.Month) } )
-        .attr("cy", function(d) { return y(d.intersectionalityW) } )
+        .attr("cy", function(d) { return y(d.international_womens_dayW) } )
         .attr("r", 3)
         .attr("stroke", "#560c78")
         .attr("stroke-width", 1)
@@ -711,8 +724,8 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
     svg4.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", 1.5)
+      .attr("stroke", "#f0868c")
+      .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
         .x(function(d) { return x(d.Month) })
@@ -721,7 +734,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz")
+    var Tooltip = d3.select("#my_dataviz4")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
@@ -783,7 +796,7 @@ var margin = {top: 10, right: 30, bottom: 30, left: 60},
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg5 = d3.select("#my_dataviz")
+var svg5 = d3.select("#my_dataviz5")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -825,8 +838,8 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
      svg5.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", 1.5)
+      .attr("stroke", "#23045c")
+      .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
         .x(function(d) { return x(d.Month) })
@@ -835,7 +848,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz")
+    var Tooltip = d3.select("#my_dataviz5")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
@@ -888,8 +901,8 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
     svg5.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", 1.5)
+      .attr("stroke", "#f0868c")
+      .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
         .x(function(d) { return x(d.Month) })
@@ -898,7 +911,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz")
+    var Tooltip = d3.select("#my_dataviz5")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
