@@ -53,23 +53,31 @@ div.bar{
 
 <body style="background-color:#f4f4f4;">
 
-<h2><font size = "+2"><i>"feminism"</i></font></h2>
-<br><br>
+<h2><font size = "+2"><i>"feminism"</i> – </font>
+<font size ="+1"><font color ="#8803fc">World</font> and <font color ="#f0868c">U.S.</font></font></h2>
+
+
+<br>
 <div id="my_dataviz1"></div><br><br><br><br>
 
-<h2><font size = "+2"><i>"sexual assault"</i></font></h2>
+<h2><font size = "+2"><i>"sexual assault"</i> – </font>
+<font size ="+1"><font color ="#8803fc">World</font> and <font color ="#f0868c">U.S.</font></font></h2>
+
 <br><br>
 <div id="my_dataviz2"></div><br><br><br><br>
 
-<h2><font size = "+2"><i>"women's rights"</i></font></h2>
+<h2><font size = "+2"><i>"women's rights"</i> – </font>
+<font size ="+1"><font color ="#8803fc">World</font> and <font color ="#f0868c">U.S.</font></font></h2>
 <br><br>
 <div id="my_dataviz3"></div><br><br><br><br>
 
-<h2><font size = "+2"><i>"international women's day"</i></font></h2>
+<h2><font size = "+2"><i>"international women's day"</i> – </font>
+<font size ="+1"><font color ="#8803fc">World</font> and <font color ="#f0868c">U.S.</font></font></h2>
 <br><br>
 <div id="my_dataviz4"></div><br><br><br><br>
 
-<h2><font size = "+2"><i>"intersectionality"</i></font></h2>
+<h2><font size = "+2"><i>"intersectionality"</i></font> – </font>
+<font size ="+1"><font color ="#8803fc">World</font> and <font color ="#f0868c">U.S.</font></font></h2>
 <br><br>
 <div id="my_dataviz5"></div><br><br><br><br>
 
@@ -129,7 +137,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
     svg1.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "#23045c")
+      .attr("stroke", "#8803fc")
       .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
@@ -143,10 +151,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", ".5px")
-      .style("border-radius", "1px")
+      .attr("font-color","#8803fc")
       .style("padding", "5px")
 
       // Three function that change the tooltip when user hover / move / leave a cell
@@ -176,7 +181,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         .attr("cx", function(d) { return x(d.Month) } )
         .attr("cy", function(d) { return y(d.feminismW) } )
         .attr("r", 3)
-        .attr("stroke", "#560c78")
+        .attr("stroke", "#8803fc")
         .attr("stroke-width", .5)
         .attr("fill", "white")
         .on("mouseover", mouseover)
@@ -206,10 +211,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", ".5px")
-      .style("border-radius", "2px")
+
       .style("padding", "5px")
 
 
@@ -307,7 +309,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
     svg2.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "#23045c")
+      .attr("stroke", "#8803fc")
       .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
@@ -354,7 +356,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         .attr("cx", function(d) { return x(d.Month) } )
         .attr("cy", function(d) { return y(d.sexual_assaultW) } )
         .attr("r", 3)
-        .attr("stroke", "#560c78")
+        .attr("stroke", "#8803fc")
         .attr("stroke-width", .5)
         .attr("fill", "white")
         .on("mouseover", mouseover)
@@ -482,7 +484,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
     svg3.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "#23045c")
+      .attr("stroke", "#8803fc")
       .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
@@ -529,7 +531,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         .attr("cx", function(d) { return x(d.Month) } )
         .attr("cy", function(d) { return y(d.womens_rightsW) } )
         .attr("r", 3)
-        .attr("stroke", "#560c78")
+        .attr("stroke", "#8803fc")
         .attr("stroke-width", .5)
         .attr("fill", "white")
         .on("mouseover", mouseover)
@@ -661,7 +663,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
      svg4.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "#23045c")
+      .attr("stroke", "#8803fc")
       .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
@@ -708,7 +710,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         .attr("cx", function(d) { return x(d.Month) } )
         .attr("cy", function(d) { return y(d.international_womens_dayW) } )
         .attr("r", 3)
-        .attr("stroke", "#560c78")
+        .attr("stroke", "#8803fc")
         .attr("stroke-width", .5)
         .attr("fill", "white")
         .on("mouseover", mouseover)
@@ -838,7 +840,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
      svg5.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "#23045c")
+      .attr("stroke", "#8803fc")
       .attr("stroke-width", .5)
       .attr("d", d3.line()
         .curve(d3.curveBasis) // Just add that to have a curve instead of segments
@@ -885,7 +887,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         .attr("cx", function(d) { return x(d.Month) } )
         .attr("cy", function(d) { return y(d.intersectionalityW) } )
         .attr("r", 3)
-        .attr("stroke", "#560c78")
+        .attr("stroke", "#8803fc")
         .attr("stroke-width", .5)
         .attr("fill", "white")
         .on("mouseover", mouseover)
