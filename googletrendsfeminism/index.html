@@ -15,7 +15,7 @@ HOVER<BR>
 <html lang="en">
 
 
-<head style="background-color:#f4f4f4;">
+<head style="background-color:#edfcfa;">
 
 	<meta charset="utf-8">
 
@@ -50,7 +50,7 @@ div.bar{
 
 <!-- Add a bit of text -->
 	<h1>
-<font size="-1">A Look at Google Search Popularity</font><br><br>
+<font size="-1">A Look at Google Searches Through the Last Decade</font><br><br>
 	</h1><br><br>
 
 
@@ -86,32 +86,67 @@ div.bar{
 <body style="background-color:#ffffff;">
 
 
-<h2>INSERT WORDSSSSS EXPLAIN THE PROJECT....<br><br>MAIN THINGS TO FIX 
-  f<br>1. insert intro (impt! social change! how internet faciliates info/knowledge/awarenes etc), explain each graph, (search data has is random / normalized. make sure 2 mention that!) conclusion 
-  <br>2. clean up tooltip feature 
-  <br>3. what does each "score" actually means
-  <br>4. hover
-  <br>5.map to real world events
-  <br>6. highlight certain dots
-  <br>7. email tonia asap 8 am<br><br></h2>
+<h5>The last couple years have marked a renewed age for feminism – one that evolved the word from a taboo phrase to one plastered everywhere – from news sites to mainstream sweatshirts. This era, facilitated through the digital age and bolstered by online dialogue, relies on what and how information is circulated online. Often, Google serves as a primary gateway for awareness and education in such a time, thus here we take a look at the relative popularity of feminism and related subjects, through the lens of Google searches over the last decade. These graphs chart both the numbers specific to the United States, as well as to the globe at large, to illustrate, indeed, an often alignment between the one, most notably in the generally increase in interest. Perhaps, feminism in the modern age is not so much a temporary trend, rather one consistently upward.</h5>
+
+<br><br><br>
+
+How This Data Works – we're working with "scores" assigned to each month according to the Google Trends Help Center:
+
+Trends adjusts search data to make comparisons between terms easier. Each data point is divided by the total searches of the geography and time range it represents, to compare relative popularity.
+In other words, relative popularity is the ratio of a query’s search volume to the sum of the search volumes of all possible queries.
+
+The resulting numbers then get scaled on a range of 0 to 100 based on a topics proportion to all searches.
+
+<br>MAIN THINGS TO FIX 
+  f<br>1. explain each graph & map to real world events, (search data has is random / normalized. make sure 2 mention that!) conclusion (nsert intro (impt! social change! how internet faciliates info/knowledge/awarenes etc), )
+  <br>2. what does each "score" actually means-normalized / random "About this Data"-sources; tjanks!- watch "use of popualr"
+
+  <br>3. highlight certain dots and link to the descr<br><br>
+  <br>4.sources, acknowledge graph man
+  <br>5. email tonia asap 8 am<br><br></h2>
 
 <h2><font size = "+2"><i>"feminism"</i> – </font>
 <font size ="+1"><font color ="#8803fc">World</font> and <font color ="#f0868c">U.S.</font></font></h2>
 
 
 <br>
-<div id="my_dataviz1"></div><br><br><br><br>
+<div id="my_dataviz1"></div>
+
+<h5><font size ="-2"><i>Hover over the points to see exact score values. </i></font><br><br>First, let's take a look at the main word "feminism" itself. It's relative popularity has indeed grown over time, with noted spikes. These months indeed correspond to cultural milestones that generated interest in the topic and thus increase in its searches.<br></h5>
+
+
+
+<div class="grid-container">
+  <div class="grid-item"><b>October 2014 </b>– Emma Watson speaks to the UN about gender equality, i.e. the most circulated public explanation of feminism in the modern age</div>
+  <div class="grid-item"><b>January 2017 </b>– the first Women's March, sparked in the United States and later popularized around the world, stands up to Donald Trump's inauguration </div>
+  <div class="grid-item"><b>March 2017 </b>– International Women's Day, a holiday reaching a few years before this point, has renewed attention following the increased focus on women's rights following the March</div></div>
+  <svg height="10" width=100%>
+
+<line x1="0" y1="7" x2="1000" y2="7" stroke="grey" style="stroke-width:.1" align="center"/>
+
+</svg>
+
+  <div class="grid-container">
+  <div class="grid-item"><b>October 2017 </b>– the #MeToo movement shatters many social taboo and unleashes a global outcry of women sharing their stories of rape, assault, and harrasment</div>
+  <div class="grid-item"><b>March 2018 </b>– another spike in March coincides with another International Women's Day in a new social climate, this time in a specifically "post-#MeToo" one 
+  </div>
+  <div class="grid-item"><b>October 2018</b> – the United States, along with the world, reacts to the story of Dr. Christine Blasey Ford, who testifies to Congress her sexual assault perpetrated by then-Supreme Count Judge-nominee Brett Kavanaugh </div>
+
+</div>
+<br><br><br><br>
 
 <h2><font size = "+2"><i>"sexual assault"</i> – </font>
 <font size ="+1"><font color ="#8803fc">World</font> and <font color ="#f0868c">U.S.</font></font></h2>
 
 <br><br>
-<div id="my_dataviz2"></div><br><br><br><br>
+<div id="my_dataviz2"></div>
+<br><br><br><br>
 
 <h2><font size = "+2"><i>"women's rights"</i> – </font>
 <font size ="+1"><font color ="#8803fc">World</font> and <font color ="#f0868c">U.S.</font></font></h2>
 <br><br>
-<div id="my_dataviz3"></div><br><br><br><br>
+<div id="my_dataviz3"></div>
+<br><br><br><br>
 
 <h2><font size = "+2"><i>"international women's day"</i> – </font>
 <font size ="+1"><font color ="#8803fc">World</font> and <font color ="#f0868c">U.S.</font></font></h2>
@@ -132,7 +167,7 @@ div.bar{
 <script>
 
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 30, left: 60},
+var margin = {top: 10, right: 30, bottom: 10, left: 60},
     width = 800 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
@@ -154,6 +189,7 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
   function(d){
     return { Month : d3.timeParse("%Y-%m-%d")(d.Month), feminismW : d.feminismW, feminismUS : d.feminismUS }
   },
+
 
 
 
@@ -191,31 +227,34 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz1")
+    var Tooltip1a = d3.select("#my_dataviz1")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-      .attr("font-color","#8803fc")
+      .style("font-family", "Optima")
+      .style("font-size", "12px")
+      .style("color", "#8803fc")
       .style("padding", "5px")
+
+
 
       // Three function that change the tooltip when user hover / move / leave a cell
       var mouseover = function(d) {
-        Tooltip
+        Tooltip1a
           .style("opacity", 1)
       }
       var mousemove = function(d) {
-        Tooltip
-         .html("search popularity in " + d3.timeFormat("%B %Y")(d.Month)+ " was "+ d.feminismW +"%")
+        Tooltip1a
+         .html("relative search popularity for 'feminism' around the world during " + d3.timeFormat("%B %Y")(d.Month)+ " scored a "+ d.feminismW)
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
       var mouseleave = function(d) {
-        Tooltip
+        Tooltip1a
           .style("opacity", 0)
       }
 
-    // Add the points
-    svg1
+      svg1
       .append("g")
       .selectAll("dot")
       .data(data)
@@ -225,13 +264,17 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         .attr("cx", function(d) { return x(d.Month) } )
         .attr("cy", function(d) { return y(d.feminismW) } )
         .attr("r", 3)
-        .attr("stroke", "#8803fc")
+        .attr("stroke", "#8803fc") //function(d) 
+                  //{if ((d.feminismW) = "100") // circle if bar === 0
+            //return "green";
+        //else
+            //return "#8803fc"})
+
         .attr("stroke-width", .5)
         .attr("fill", "white")
         .on("mouseover", mouseover)
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave)
-
 
 
 
@@ -249,30 +292,32 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz1")
+    var Tooltip1b = d3.select("#my_dataviz1")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-
+      .style("font-family", "Optima")
+      .style("font-size", "12px")
+      .style("color", "red")
       .style("padding", "5px")
 
 
 
+      // Three function that change the tooltip when user hover / move / leave a cell
       var mouseover = function(d) {
-        Tooltip
+        Tooltip1b
           .style("opacity", 1)
       }
       var mousemove = function(d) {
-        Tooltip
-         .html("search popularity in " + d3.timeFormat("%B %Y")(d.Month)+ " was "+ d.feminismUS +"%")
+        Tooltip1b
+         .html("relative search popularity for 'feminism' in the US during " + d3.timeFormat("%B %Y")(d.Month)+ " scored a "+ d.feminismUS)
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
       var mouseleave = function(d) {
-        Tooltip
+        Tooltip1b
           .style("opacity", 0)
       }
-
 
     // Add the points
     svg1
@@ -285,12 +330,18 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         .attr("cx", function(d) { return x(d.Month) } )
         .attr("cy", function(d) { return y(d.feminismUS) } )
         .attr("r", 3)
-        .attr("stroke", "red")
+        .attr("stroke", function(d) 
+                  {if (d.Month === "2019-01-01") // circle if bar === 0
+            return "green";
+        else
+            return "red"})
+
         .attr("stroke-width", .5)
         .attr("fill", "white")
         .on("mouseover", mouseover)
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave)
+
 
 
 
@@ -361,29 +412,28 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz2")
+    var Tooltip2a = d3.select("#my_dataviz2")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "2px")
-      .style("border-radius", "5px")
+      .style("font-family", "Optima")
+      .style("font-size", "12px")
+      .style("color", "#8803fc")
       .style("padding", "5px")
 
       // Three function that change the tooltip when user hover / move / leave a cell
       var mouseover = function(d) {
-        Tooltip
+        Tooltip2a
           .style("opacity", 1)
       }
       var mousemove = function(d) {
-        Tooltip
-         .html("search popularity in " + d3.timeFormat("%B %Y")(d.Month)+ " was "+ d.sexual_assaultW +"%")
+        Tooltip2a
+          .html("relative search popularity for 'sexual assault' around the world during " + d3.timeFormat("%B %Y")(d.Month)+ " scored a "+ d.sexual_assaultW)
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
       var mouseleave = function(d) {
-        Tooltip
+        Tooltip2a
           .style("opacity", 0)
       }
 
@@ -424,28 +474,27 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz2")
+    var Tooltip2b = d3.select("#my_dataviz2")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "2px")
-      .style("border-radius", "5px")
+      .style("font-family", "Optima")
+      .style("font-size", "12px")
+      .style("color", "red")
       .style("padding", "5px")
 
 var mouseover = function(d) {
-        Tooltip
+        Tooltip2b
           .style("opacity", 1)
       }
       var mousemove = function(d) {
-        Tooltip
-         .html("search popularity in " + d3.timeFormat("%B %Y")(d.Month)+ " was "+ d.sexual_assaultUS +"%")
+        Tooltip2b
+         .html("relative search popularity for 'sexual assault' in the US during " + d3.timeFormat("%B %Y")(d.Month)+ " scored a "+ d.sexual_assaultUS )
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
       var mouseleave = function(d) {
-        Tooltip
+        Tooltip2b
           .style("opacity", 0)
       }
     // Add the points
@@ -536,29 +585,28 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz3")
+    var Tooltip3a = d3.select("#my_dataviz3")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "2px")
-      .style("border-radius", "5px")
+      .style("font-family", "Optima")
+      .style("font-size", "12px")
+      .style("color", "#8803fc")
       .style("padding", "5px")
 
       // Three function that change the tooltip when user hover / move / leave a cell
       var mouseover = function(d) {
-        Tooltip
+        Tooltip3a
           .style("opacity", 1)
       }
       var mousemove = function(d) {
-        Tooltip
-         .html("search popularity in " + d3.timeFormat("%B %Y")(d.Month)+ " was "+ d.womens_rightsW +"%")
+        Tooltip3a
+         .html("relative search popularity for 'women's rights' around the world during " + d3.timeFormat("%B %Y")(d.Month)+ " scored a "+ d.womens_rightsW )
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
       var mouseleave = function(d) {
-        Tooltip
+        Tooltip3a
           .style("opacity", 0)
       }
 
@@ -599,14 +647,13 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz3")
+    var Tooltip3b = d3.select("#my_dataviz3")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "2px")
-      .style("border-radius", "5px")
+      .style("font-family", "Optima")
+      .style("font-size", "12px")
+      .style("color", "red")
       .style("padding", "5px")
 
 
@@ -614,17 +661,17 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
 
       // Three function that change the tooltip when user hover / move / leave a cell
       var mouseover = function(d) {
-        Tooltip
+        Tooltip3b
           .style("opacity", 1)
       }
       var mousemove = function(d) {
-        Tooltip
-         .html("search popularity in " + d3.timeFormat("%B %Y")(d.Month)+ " was "+ d.womens_rightsUS +"%")
+        Tooltip3b
+         .html("relative search popularity for 'women's rights' in the US during " + d3.timeFormat("%B %Y")(d.Month)+ " scored a "+ d.womens_rightsUS )
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
       var mouseleave = function(d) {
-        Tooltip
+        Tooltip3b
           .style("opacity", 0)
       }
 
@@ -715,32 +762,29 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz4")
+    var Tooltip4a = d3.select("#my_dataviz4")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "2px")
-      .style("border-radius", "5px")
+      .style("font-family", "Optima")
+      .style("font-size", "12px")
+      .style("color", "#8803fc")
       .style("padding", "5px")
 
-      // Three function that change the tooltip when user hover / move / leave a cell
       var mouseover = function(d) {
-        Tooltip
+        Tooltip4a
           .style("opacity", 1)
       }
       var mousemove = function(d) {
-        Tooltip
-         .html("search popularity in " + d3.timeFormat("%B %Y")(d.Month)+ " was "+ d.international_womens_dayW +"%")
+        Tooltip4a
+         .html("relative search popularity for 'international women's day around the world during " + d3.timeFormat("%B %Y")(d.Month)+ " scored a "+ d.international_womens_dayW )
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
       var mouseleave = function(d) {
-        Tooltip
+        Tooltip4a
           .style("opacity", 0)
       }
-
     // Add the points
     svg4
       .append("g")
@@ -778,28 +822,27 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz4")
+    var Tooltip4b = d3.select("#my_dataviz4")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "2px")
-      .style("border-radius", "5px")
+      .style("font-family", "Optima")
+      .style("font-size", "12px")
+      .style("color", "red")
       .style("padding", "5px")
 
       var mouseover = function(d) {
-        Tooltip
+        Tooltip4b
           .style("opacity", 1)
       }
       var mousemove = function(d) {
-        Tooltip
-         .html("search popularity in " + d3.timeFormat("%B %Y")(d.Month)+ " was "+ d.international_womens_dayUS +"%")
+        Tooltip4b
+         .html("relative search popularity for 'international women's day in the US during " + d3.timeFormat("%B %Y")(d.Month)+ " scored a "+ d.international_womens_dayUS )
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
       var mouseleave = function(d) {
-        Tooltip
+        Tooltip4b
           .style("opacity", 0)
       }
     // Add the points
@@ -892,29 +935,28 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz5")
+    var Tooltip5a = d3.select("#my_dataviz5")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "2px")
-      .style("border-radius", "5px")
+      .style("font-family", "Optima")
+      .style("font-size", "12px")
+      .style("color", "#8803fc")
       .style("padding", "5px")
 
       // Three function that change the tooltip when user hover / move / leave a cell
       var mouseover = function(d) {
-        Tooltip
+        Tooltip5a
           .style("opacity", 1)
       }
       var mousemove = function(d) {
-        Tooltip
-         .html("search popularity in " + d3.timeFormat("%B %Y")(d.Month)+ " was "+ d.intersectionalityW +"%")
+        Tooltip5a
+         .html("relative search popularity for 'intersectionality' around the world during " + d3.timeFormat("%B %Y")(d.Month)+ " scored a "+ d.intersectionalityW )
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
       var mouseleave = function(d) {
-        Tooltip
+        Tooltip5a
           .style("opacity", 0)
       }
 
@@ -955,28 +997,27 @@ d3.csv("https://zohaqamar.github.io/googletrendsfeminism/google_use_data.csv",
         )
 
     // create a tooltip
-    var Tooltip = d3.select("#my_dataviz5")
+    var Tooltip5b = d3.select("#my_dataviz5")
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "2px")
-      .style("border-radius", "5px")
+      .style("font-family", "Optima")
+      .style("font-size", "12px")
+      .style("color", "red")
       .style("padding", "5px")
 
       var mouseover = function(d) {
-        Tooltip
+        Tooltip5b
           .style("opacity", 1)
       }
       var mousemove = function(d) {
-        Tooltip
-         .html("search popularity in " + d3.timeFormat("%B %Y")(d.Month)+ " was "+ d.intersectionalityUS +"%")
+        Tooltip5b
+         .html("relative search popularity for 'intersectionality' in the US during " + d3.timeFormat("%B %Y")(d.Month)+ " scored a "+ d.intersectionalityUS )
           .style("left", (d3.mouse(this)[0]+70) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
       var mouseleave = function(d) {
-        Tooltip
+        Tooltip5b
           .style("opacity", 0)
       }
     // Add the points

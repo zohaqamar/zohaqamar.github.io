@@ -19,11 +19,11 @@ font-style: normal; font-variant: normal; font-weight: 100; line-height: 15px; c
 h2 { font-family: Optima, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 15px; 
 font-style: normal; font-variant: normal; font-weight: 100; line-height: 20px; color : #3b3945}
 
+
 h4 { font-family: Optima, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 10px; 
 font-style: normal; font-variant: normal; font-weight: 100; line-height: 20px; color : #3b3945;text-align:left}
-
-h5 { font-family: Gill Sans, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 9px; 
-font-style: bold; font-variant: bold; font-weight: 100; line-height: 15px; color : black; text-align:center; }
+h5 { font-family: Optima, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 15px; 
+font-style: normal; font-variant: normal; font-weight: 100; line-height: 20px; color : #3b3945;text-align:center}
 
 
 .tab { margin-left: 40px; }
@@ -417,4 +417,16 @@ a:active {
   text-decoration: underline;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
 
+  padding: 10px;
+}
+.grid-item {
+
+  padding: 20px;
+  font-size: 10px;
+    font-family: Optima;
+  text-align: center;
+}
