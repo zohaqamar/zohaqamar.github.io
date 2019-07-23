@@ -19,9 +19,11 @@ font-style: normal; font-variant: normal; font-weight: 100; line-height: 15px; c
 h2 { font-family: Optima, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 15px; 
 font-style: normal; font-variant: normal; font-weight: 100; line-height: 20px; color : #3b3945}
 
+h6 { font-family: Optima, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 15px; 
+font-style: normal; font-variant: normal; font-weight: 100; line-height: 15px; color : #3b3945;text-align:center}
 
 h4 { font-family: Optima, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 10px; 
-font-style: normal; font-variant: normal; font-weight: 100; line-height: 20px; color : #3b3945;text-align:left}
+font-style: normal; font-variant: normal; font-weight: 100; line-height: 10px; color : #3b3945;text-align:left}
 h5 { font-family: Optima, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 15px; 
 font-style: normal; font-variant: normal; font-weight: 100; line-height: 20px; color : #3b3945;text-align:center}
 
@@ -419,7 +421,21 @@ a:active {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
+
+  padding: 10px;
+}
+.grid-item {
+
+  padding: 20px;
+  font-size: 10px;
+    font-family: Optima;
+  text-align: center;
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 
   padding: 10px;
 }
